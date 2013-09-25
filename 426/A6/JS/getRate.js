@@ -1,0 +1,5 @@
+getRate(applicant, dorm){
+	if () {
+		
+	}
+}

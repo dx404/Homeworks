@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+.content{
+	position:relative;
+}
+p.section-help {
+	font-size:18px;
+	margin-left:0.5cm;
+}
+
+/* Below is the layout of div blocks*/
+
+ul.option > li:before{
+	content: "Option " counter(optionCounter) ": "; 
+	counter-increment:optionCounter;
+	font-style:italic;
+}
+
+div.control-button { /* the block of buttons at the bottom */
+	float: right;
+}
+
+#basic-info {
+	width:48%;
+}
+
+#profile-picture{
+	position:absolute;
+	right:0.2cm;
+	top:0;
+	width:50%;
+}
+
+/* Below are the layout of the components inside div */
+
+td {
+	height: 30px;
+}
+
+#basic-info td {
+	height: 32px;
+}
+
+#profilePhotoURL{
+	height:50px;
+}
+
+button.bottom {
+	width: 200px;
+	height: 40px;
+	font-size: 16px;
+}

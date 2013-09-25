@@ -1,0 +1,6 @@
+Hello, this is my first text file edited by VIM
+and there is a lot of fun to do this.
+can you find me the pattern 919-636-9669 in this text file?
+Best to you all
+
+Duo

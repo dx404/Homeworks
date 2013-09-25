@@ -1,0 +1,13 @@
+.rFloat{
+	float:right;
+}
+
+#info {
+	width:45%;
+	display:inline-block;
+}
+.right{
+	width:45%;
+	display:inline-block;
+	float: right;
+}

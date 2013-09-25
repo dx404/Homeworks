@@ -1,0 +1,19 @@
+/**
+ * miniJava Abstract Syntax Tree classes
+ * @author prins
+ * @version COMP 520 (v2.2)
+ */
+package miniJava.AbstractSyntaxTrees;
+
+public enum TypeKind {
+	VOID,
+	INT,
+	BOOLEAN,
+	CLASS,
+	ARRAY,
+	UNSUPPORTED,
+	ERROR,
+	OK,
+	CLASS_DEF, //pa4 added for class A{} the typekind of A
+	NULL // ClassType
+}

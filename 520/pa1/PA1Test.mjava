@@ -1,0 +1,8 @@
+// tiny test program for PA1
+class PA1Test {
+   public static void main(String [] args) {
+       int n = 3;
+       n = 5 + n;
+   }
+}
+

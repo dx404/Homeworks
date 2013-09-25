@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+div.content {
+	position:relative;
+}
+div.left-column {
+	margin:0.3cm;
+	top: 1cm;
+	width: 50%;	
+	
+}
+
+.major {
+	font-size:16pt;
+}
+tr.major input {
+	height: 20px;
+	width:150px;
+}
+
+div.right-column {
+	position: absolute;
+	width: 40%;
+	top:0.2cm;
+	right:0.2cm;
+	height:500px;
+}
+
+table.login td {
+	height:25px;
+}
+
+fieldset {
+	margin-bottom:0.3cm;
+	opacity: 0.85;
+	background-color: lightblue;
+	border: 5px outset #B8860B;
+	width:385px;
+}
+
+legend {
+	font: italic bold 22px arial, sans-serif;
+	color: Indigo;
+	margin-top: 0;
+}

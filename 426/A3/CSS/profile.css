@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('../background/skyblue.jpg');
+	background-size: 100%;
+	margin: 1cm;
+	border: 2px solid green;
+	min-width: 896px;
+	max-width: 1024px;
+}
+
+p.section-help {
+	font-size:18px;
+	margin-left:0.5cm;
+}
+/* Below is the layout of div blocks*/
+div.simple-input-block:hover,button:hover {
+	background-color: yellow;
+}
+
+div#menu {
+	color:blue;
+	margin: 0.3cm;
+	opacity: 0.85;
+}
+form.main>div{
+	margin: 0.2cm;
+	padding: 0.2cm;
+}
+
+form.main>div:first-child { /*3 sub-blocks in the 1st block*/
+	position: relative;
+	height: 460px;
+}
+
+#info>div {
+	position: absolute;
+}
+
+div.control-button { /* the block of buttons at the bottom */
+	float: right;
+}
+
+#info>div:nth-child(1) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 59%;
+	min-width: 350px;
+}
+
+#info>div:nth-child(2) {
+	top: 0;
+	left: 40%;
+	right: 0;
+}
+
+#info>div:nth-child(3) {
+	bottom: 0;
+	left: 40%;
+	right: 0;
+}
+
+/* Below are the layout of the components inside div */
+fieldset {
+	margin: 0.3cm;
+	opacity: 0.85;
+	background-color: lightblue;
+	border: 5px outset #B8860B;
+}
+
+#basic-info>fieldset {
+	height: 450px;
+}
+
+td {
+	height: 30px;
+}
+
+#basic-info td {
+	height: 38px;
+}
+
+legend {
+	font: italic bold 22px arial, sans-serif;
+	color: Indigo;
+	margin-top: 0;
+}
+
+.required{
+	color:red;
+}
+
+button {
+	width: 200px;
+	height: 40px;
+	font-size: 16px;
+}
+
+/*Below are the banner CSS*/
+#page-head-div {
+	height: 35px;
+	border: thin solid black;
+	min-width: 200px;
+	overflow: auto;
+	background-color: #008B8B;
+	padding: 5px;
+	margin: 10px;
+	font: italic bold 20pt "Times New Roman", Georgia, Serif;
+	color: white;
+}
+
+#page-head-title {
+	float: left;
+	margin-left: 3px;
+}
+
+#page-head-greetings {
+	float: right;
+}

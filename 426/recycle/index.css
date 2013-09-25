@@ -1,0 +1,15 @@
+#key {
+	color: yellow;
+}
+
+#id1 span {
+	color: red;
+}
+
+.first {
+	color: green;
+}
+
+div>p>span.notice {
+	color: blue;
+}

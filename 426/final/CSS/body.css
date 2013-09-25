@@ -1,0 +1,8 @@
+body {
+	background-image: url('../image/background/skyblue.jpg');
+	background-size: 100%;
+	margin: 1cm;
+	border: 2px solid green;
+	min-width: 1024px;
+	max-width: 1680px;
+}

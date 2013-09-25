@@ -1,0 +1,2561 @@
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail101.java
+// PA1 lex id fail
+class _id {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail102.java
+// PA1 lex id fail
+class boolean {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail103.java
+// PA1 parse fail
+class Foo {}.
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"." not expected after end of program 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail104.java
+// PA1 lex id fail
+class else {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail105.java
+// PA1 lex id fail
+class public {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail106.java
+// PA1 lex id fail
+class true {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail117.java
+// PA1 lex comment fail
+class id {} /* unterminated 
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR=================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail118.java
+// PA1 lex comment fail
+class /* /* nested */ */ id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 2..2
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail119.java
+// PA1 lex ill char fail
+class NonTokens{} #
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"#" not expected after end of program 2..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail125.java
+// PA1 lex binop fail
+class id {
+    void p(){
+        int x = 1 &| 0;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+";" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail126.java
+// PA1 lex binop fail
+class id {
+    void p(){
+        while ( 1 |& 0 ) {}
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+")" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail127.java
+// PA1 lex/parse binop fail
+class id {
+    void p(){
+        int x = 1 >> 0;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail128.java
+// PA1 lex binop fail
+class id {
+    void p(){
+        while ( 1 !& 0) {}
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+")" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail130.java
+// PA1 lex trailing start char fail
+class Almost {
+   public static void main (String [] args) {
+   } // nothing follows next slash
+} /
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"/" not expected after end of program 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail131.java
+// PA1 lex comment fail
+class IllegalComment {
+   public static void main (String [] args) {
+   } // nothing follows final *
+}/* ****
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR=================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail140.java
+// PA1 parse field decl fail
+class id {
+    static private Type x;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+Token not expected, parseType() 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail141.java
+// PA1 parse field decl fail
+class id {
+    public private static Type x;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+Token not expected, parseType() 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail142.java
+// PA1 parse field decl fail
+class id {
+    int x = 3;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" cannot start classDeclaration 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail143.java
+// PA1 parse field decl fail
+class id {
+    void int x;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail144.java
+// PA1 parse field decl fail
+class id {
+    public [] String x;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+Token not expected, parseType() 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail145.java
+// PA1 parse field decl fail
+class id {
+    public void [] x;
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 3..3
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail146.java
+// PA1 parse local decl fail
+class id {
+    void foo() {
+        Nonesuch x[2] = 3;
+    }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail147.java
+// PA1 parse local decl fail
+class id {
+    public void f(){
+        Ref [] x(33);
+    }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail148.java
+// PA1 parse local decl fail
+class id {
+    public void f(){
+        int x;
+    }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail149.java
+// PA1 parse local decl fail
+class id {
+    public void f(){
+        Foo x;
+    }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail150.java
+// PA1 parse local decl fail
+class idfail {
+   public void foo () {
+      int [] x[3] = null;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail151.java
+// PA1 parse local decl fail
+class LValueFail {
+   void foo () {
+      true = false;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"true" cannot start a statement 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail152.java
+// PA1 parse expr fail
+class NonTokens{
+   int main () {
+      return a++b;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail153.java
+// PA1 parse expr fail
+class NonTokens{
+   int main () {
+      return a < = b;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail154.java
+// PA1 parse expr fail
+class IllegalExpressions {
+   void main () {
+      z = a+!=b;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail155.java
+// PA1 parse stmt fail
+class IllegalStmt {
+   void main () {
+       this;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail156.java
+// PA1 parse expr fail
+class IllegalExpressions {
+   static void foo (int a) {
+      if (a = a) {
+         a = a;
+      }
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+")" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail157.java
+// PA1 parse unop fail
+class IllegalExpressions {
+   void foo() {
+      z = a!b;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+";" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail158.java
+// PA1 parse ref fail
+class IllegalExpressions {
+    void foo () {
+      a b [c] = d;   // not ok
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 4..4
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail159.java
+// PA1 parse method fail
+class IllegalExpressions {
+    void foo () {
+        if (x != 0)
+	    return x;
+        return y; 
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"return" cannot start a statement 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail160.java
+// PA1 parse refs fail
+class Test {
+
+    void p() {
+        A a [17] = 23;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail161.java
+// PA1 parse decl fail
+class Test {
+
+    void p() {
+        boolean [] a = b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail162.java
+// PA1 parse call fail
+class Test {
+
+    void p(int a, boolean b) {
+      int p(a,b);
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail163.java
+// PA1 parse decl fail
+class Test {
+
+    void p(int a) {
+        Test [ ]  x.y = a;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail164.java
+// PA1 parse assign fail
+class Test {
+
+    void p(int a) {
+        Test [ ]  = a * 3;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail165.java
+// PA1 parse call fail
+class Test {
+
+    void p(int a) {
+	c.p(2,3)[3] = 4;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+";" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail166.java
+// PA1 parse assign fail
+class Test {
+
+    void p(int a) {
+	a.v[] = 4;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+identifier expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail167.java
+// PA1 parse assign fail
+class Test {
+
+    void p() {
+	x.y() = z;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+";" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail168.java
+// PA1 parse decl fail
+class Test {
+
+    void p() {
+	c [] d b = new int[4];
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+"=" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/fail169.java
+// PA1 parse new fail
+class Test {
+
+    void p() {
+	x = new Foo(10);
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: System.exit(4);=================
+ERROR: from reportError=== 
+")" expected here 5..5
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass101.java
+// PA1 lex id pass
+class id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass102.java
+// PA1 lex id pass
+class id_ {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id_" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass103.java
+// PA1 lex id pass
+class id_0_1__{}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id_0_1__" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass104.java
+// PA1 lex id pass
+class class_{}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "class_" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass105.java
+// PA1 lex id pass
+class Class{}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Class" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass110.java
+// PA1 lex comment pass
+class // comment $$ followed by \r\n
+id {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass113.java
+// PA1 lex comment pass
+class id {} // trailing comment terminated by \r\n
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass117.java
+// PA1 lex comment pass
+class /* comment */ id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass118.java
+// PA1 lex comment pass
+class /**/ id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass119.java
+// PA1 lex comment pass
+class /*/**/ id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass120.java
+// PA1 lex comment pass
+class /*/$*/ id {}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass121.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        int x =  - b;
+        boolean y = !y;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [2]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "x" Identifier
+  .   .   .   UnaryExpr
+  .   .   .     "-" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "b" Identifier
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "y" Identifier
+  .   .   .   UnaryExpr
+  .   .   .     "!" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "y" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass123.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        boolean x =  !!!!!b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "x" Identifier
+  .   .   .   UnaryExpr
+  .   .   .     "!" Operator
+  .   .   .       UnaryExpr
+  .   .   .         "!" Operator
+  .   .   .           UnaryExpr
+  .   .   .             "!" Operator
+  .   .   .               UnaryExpr
+  .   .   .                 "!" Operator
+  .   .   .                   UnaryExpr
+  .   .   .                     "!" Operator
+  .   .   .                       RefExpr
+  .   .   .                         QualifiedRef
+  .   .   .                           "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass124.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        boolean x =  10 >- b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "x" Identifier
+  .   .   .   BinaryExpr
+  .   .   .     ">" Operator
+  .   .   .       LiteralExpr
+  .   .   .         "10" IntLiteral
+  .   .   .       UnaryExpr
+  .   .   .         "-" Operator
+  .   .   .           RefExpr
+  .   .   .             QualifiedRef
+  .   .   .               "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass125.java
+// PA1 lex binop pass
+class id {
+    void p(){
+        int x = 1 + 2 * 3 / 4 > 5 >= 6 < 7 <= 8 != 9 && 0 || 1;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "x" Identifier
+  .   .   .   BinaryExpr
+  .   .   .     "||" Operator
+  .   .   .       BinaryExpr
+  .   .   .         "&&" Operator
+  .   .   .           BinaryExpr
+  .   .   .             "!=" Operator
+  .   .   .               BinaryExpr
+  .   .   .                 "<=" Operator
+  .   .   .                   BinaryExpr
+  .   .   .                     "<" Operator
+  .   .   .                       BinaryExpr
+  .   .   .                         ">=" Operator
+  .   .   .                           BinaryExpr
+  .   .   .                             ">" Operator
+  .   .   .                               BinaryExpr
+  .   .   .                                 "+" Operator
+  .   .   .                                   LiteralExpr
+  .   .   .                                     "1" IntLiteral
+  .   .   .                                   BinaryExpr
+  .   .   .                                     "/" Operator
+  .   .   .                                       BinaryExpr
+  .   .   .                                         "*" Operator
+  .   .   .                                           LiteralExpr
+  .   .   .                                             "2" IntLiteral
+  .   .   .                                           LiteralExpr
+  .   .   .                                             "3" IntLiteral
+  .   .   .                                       LiteralExpr
+  .   .   .                                         "4" IntLiteral
+  .   .   .                               LiteralExpr
+  .   .   .                                 "5" IntLiteral
+  .   .   .                           LiteralExpr
+  .   .   .                             "6" IntLiteral
+  .   .   .                       LiteralExpr
+  .   .   .                         "7" IntLiteral
+  .   .   .                   LiteralExpr
+  .   .   .                     "8" IntLiteral
+  .   .   .               LiteralExpr
+  .   .   .                 "9" IntLiteral
+  .   .   .           LiteralExpr
+  .   .   .             "0" IntLiteral
+  .   .   .       LiteralExpr
+  .   .   .         "1" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass126.java
+// PA1 lex binop pass
+class id {
+    void p(){
+        boolean x = true && false || x;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "x" Identifier
+  .   .   .   BinaryExpr
+  .   .   .     "||" Operator
+  .   .   .       BinaryExpr
+  .   .   .         "&&" Operator
+  .   .   .           LiteralExpr
+  .   .   .             "true" BooleanLiteral
+  .   .   .           LiteralExpr
+  .   .   .             "false" BooleanLiteral
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "x" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass127.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        int y = --y;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+===========ERROR: "--" is not allowed=================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass128.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        int x =  b - - b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "x" Identifier
+  .   .   .   BinaryExpr
+  .   .   .     "-" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "b" Identifier
+  .   .   .       UnaryExpr
+  .   .   .         "-" Operator
+  .   .   .           RefExpr
+  .   .   .             QualifiedRef
+  .   .   .               "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass129.java
+// PA1 lex unop pass
+class id {
+    void p(){
+        int x =  b - - - -b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "x" Identifier
+  .   .   .   BinaryExpr
+  .   .   .     "-" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "b" Identifier
+  .   .   .       UnaryExpr
+  .   .   .         "-" Operator
+  .   .   .           UnaryExpr
+  .   .   .             "-" Operator
+  .   .   .               UnaryExpr
+  .   .   .                 "-" Operator
+  .   .   .                   RefExpr
+  .   .   .                     QualifiedRef
+  .   .   .                       "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass130.java
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass131.java
+// PA1 lex whitespace including tab
+class Test {
+ 		 /* multiple comments between
+     */    
+
+    // tokens
+
+    /**//* is OK */
+
+
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass132.java
+// PA1 lex comment pass
+class // comment followed by \n only 
+id {}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass133.java
+// PA1 lex comment pass
+class // comment followed by \r only
+ id {}
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass134.java
+// PA1 lex comment pass
+class id {} // trailing comment terminated by \r 
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass135.java
+// PA1 lex comment pass
+class id {} // trailing comment terminated by \n 
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass136.java
+// PA1 lex comment pass
+class id {} // unterminated comment - no trailing \r\n    
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass137.java
+// PA1 lex comment pass
+class id {} /* no trailing \r\n */    
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass140.java
+// PA1 parse field decl pass
+class id {
+    public static Type x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public static) FieldDecl
+  .   .   ClassType
+  .   .     "Type" Identifier
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass141.java
+// PA1 parse field decl pass
+class id {
+    private static Type x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (private static) FieldDecl
+  .   .   ClassType
+  .   .     "Type" Identifier
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass142.java
+// PA1 parse field decl pass
+class id {
+    static Type x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public static) FieldDecl
+  .   .   ClassType
+  .   .     "Type" Identifier
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass143.java
+// PA1 parse field decl pass
+class id {
+    Type x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public) FieldDecl
+  .   .   ClassType
+  .   .     "Type" Identifier
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass144.java
+// PA1 parse field decl pass
+class id {
+    int x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public) FieldDecl
+  .   .   INT BaseType
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass145.java
+// PA1 parse field decl pass
+class id {
+    int[] x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public) FieldDecl
+  .   .   ArrayType
+  .   .     INT BaseType
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass146.java
+// PA1 parse field decl pass
+class id {
+    static void x;
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [1]
+  .   . (public static) FieldDecl
+  .   .   VOID BaseType
+  .   .   "x" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass147.java
+// PA1 parse method decl pass
+class id {
+    public static void main(String[] args){}
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public static) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     ClassType
+  .   .   .       "String" Identifier
+  .   .   .   "args" Identifier
+  .   .   StmtList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass148.java
+// PA1 parse method decl pass
+class id {
+    private int f(int x, boolean b) {return 3;}
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "id" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (private) MethodDecl
+  .   .   INT BaseType
+  .   .   "f" Identifier
+  .   .   ParameterDeclList [2]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "x" Identifier
+  .   .   . ParameterDecl
+  .   .   .   BOOLEAN BaseType
+  .   .   .   "b" Identifier
+  .   .   StmtList [0]
+  .   .   LiteralExpr
+  .   .     "3" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass150.java
+// PA1 parse classdecls pass
+class MainClass {
+    public static void main (String [] args) {}
+}
+
+class OfItsOwn {
+   int A_01;
+}  // class OfItsOwn
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [2]
+  . ClassDecl
+  .   "MainClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public static) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     ClassType
+  .   .   .       "String" Identifier
+  .   .   .   "args" Identifier
+  .   .   StmtList [0]
+  . ClassDecl
+  .   "OfItsOwn" Identifier
+  .   FieldDeclList [1]
+  .   . (public) FieldDecl
+  .   .   INT BaseType
+  .   .   "A_01" Identifier
+  .   MethodDeclList [0]
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass151.java
+// PA1 parse identifiers pass
+class Keywords {
+
+    // minijava keywords are lower case only
+    void p() {
+        int format = while_1;
+        int Int = New;
+        For = Class;     
+        FOR = RETURN;
+    }
+
+   public int declare () {
+      boolean iF = true; 
+      boolean Then = false; 
+      boolean else1 = false;
+
+      if (true == false) { else1 = iF == Then; }
+   }
+} 
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Keywords" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [2]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [4]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "format" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "while_1" Identifier
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "Int" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "New" Identifier
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "For" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "Class" Identifier
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "FOR" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "RETURN" Identifier
+  .   . (public) MethodDecl
+  .   .   INT BaseType
+  .   .   "declare" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [4]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "iF" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "true" BooleanLiteral
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "Then" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "false" BooleanLiteral
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "else1" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "false" BooleanLiteral
+  .   .   . IfStmt
+  .   .   .   BinaryExpr
+  .   .   .     "==" Operator
+  .   .   .       LiteralExpr
+  .   .   .         "true" BooleanLiteral
+  .   .   .       LiteralExpr
+  .   .   .         "false" BooleanLiteral
+  .   .   .   BlockStmt
+  .   .   .     StatementList [1]
+  .   .   .     . AssignStmt
+  .   .   .     .   QualifiedRef
+  .   .   .     .     "else1" Identifier
+  .   .   .     .   BinaryExpr
+  .   .   .     .     "==" Operator
+  .   .   .     .       RefExpr
+  .   .   .     .         QualifiedRef
+  .   .   .     .           "iF" Identifier
+  .   .   .     .       RefExpr
+  .   .   .     .         QualifiedRef
+  .   .   .     .           "Then" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass152.java
+// PA1 parse new pass
+class MainClass {
+   public static void main (String [] args) {
+      SecondSubClass newobj = new SecondSubClass ();
+   }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "MainClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public static) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     ClassType
+  .   .   .       "String" Identifier
+  .   .   .   "args" Identifier
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ClassType
+  .   .   .       "SecondSubClass" Identifier
+  .   .   .     "newobj" Identifier
+  .   .   .   NewObjectExpr
+  .   .   .     ClassType
+  .   .   .       "SecondSubClass" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass153.java
+// PA1 parse new pass
+class Foo {
+   void bar() {
+      int[] newarr = new int[20];
+   }
+}
+
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Foo" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "bar" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ArrayType
+  .   .   .       INT BaseType
+  .   .   .     "newarr" Identifier
+  .   .   .   NewArrayExpr
+  .   .   .     INT BaseType
+  .   .   .     LiteralExpr
+  .   .   .       "20" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass154.java
+// PA1 parse methods pass
+class MainClass {
+   public static void main (String [] args) {
+   }
+}
+class SuperClass
+{
+   public void setWorth (int worth){
+      integer = worth;
+   }
+   
+   public int getWorth (){
+      return this.integer;
+   }
+   
+   public void setTruth (boolean truth){
+      bool = truth;
+   }
+   
+   public int getTruth (){
+      return this.bool;
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [2]
+  . ClassDecl
+  .   "MainClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public static) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     ClassType
+  .   .   .       "String" Identifier
+  .   .   .   "args" Identifier
+  .   .   StmtList [0]
+  . ClassDecl
+  .   "SuperClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [4]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "setWorth" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "worth" Identifier
+  .   .   StmtList [1]
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "integer" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "worth" Identifier
+  .   . (public) MethodDecl
+  .   .   INT BaseType
+  .   .   "getWorth" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [0]
+  .   .   RefExpr
+  .   .     QualifiedRef
+  .   .       this
+  .   .       "integer" Identifier
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "setTruth" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   BOOLEAN BaseType
+  .   .   .   "truth" Identifier
+  .   .   StmtList [1]
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "bool" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "truth" Identifier
+  .   . (public) MethodDecl
+  .   .   INT BaseType
+  .   .   "getTruth" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [0]
+  .   .   RefExpr
+  .   .     QualifiedRef
+  .   .       this
+  .   .       "bool" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass155.java
+// PA1 parse parse pass
+class MainClass {
+   public static void main (String [] args) {
+      SecondSubClass newobj = new SecondSubClass ();
+   }
+}
+class SuperClass
+{
+   private void fillup (boolean open, int [] jar, int marble, int upto) {
+
+      int index = 0;
+      if (open == true) {
+         while ( index < upto ) {
+            ownjar [index] = jar [index];
+	    jar [index] = marble;
+         }  // while
+      }  // if
+   }  // fillup
+
+}  // class SuperClass
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [2]
+  . ClassDecl
+  .   "MainClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public static) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     ClassType
+  .   .   .       "String" Identifier
+  .   .   .   "args" Identifier
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ClassType
+  .   .   .       "SecondSubClass" Identifier
+  .   .   .     "newobj" Identifier
+  .   .   .   NewObjectExpr
+  .   .   .     ClassType
+  .   .   .       "SecondSubClass" Identifier
+  . ClassDecl
+  .   "SuperClass" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (private) MethodDecl
+  .   .   VOID BaseType
+  .   .   "fillup" Identifier
+  .   .   ParameterDeclList [4]
+  .   .   . ParameterDecl
+  .   .   .   BOOLEAN BaseType
+  .   .   .   "open" Identifier
+  .   .   . ParameterDecl
+  .   .   .   ArrayType
+  .   .   .     INT BaseType
+  .   .   .   "jar" Identifier
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "marble" Identifier
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "upto" Identifier
+  .   .   StmtList [2]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "index" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "0" IntLiteral
+  .   .   . IfStmt
+  .   .   .   BinaryExpr
+  .   .   .     "==" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "open" Identifier
+  .   .   .       LiteralExpr
+  .   .   .         "true" BooleanLiteral
+  .   .   .   BlockStmt
+  .   .   .     StatementList [1]
+  .   .   .     . WhileStmt
+  .   .   .     .   BinaryExpr
+  .   .   .     .     "<" Operator
+  .   .   .     .       RefExpr
+  .   .   .     .         QualifiedRef
+  .   .   .     .           "index" Identifier
+  .   .   .     .       RefExpr
+  .   .   .     .         QualifiedRef
+  .   .   .     .           "upto" Identifier
+  .   .   .     .   BlockStmt
+  .   .   .     .     StatementList [2]
+  .   .   .     .     . AssignStmt
+  .   .   .     .     .   IndexedRef
+  .   .   .     .     .     QualifiedRef
+  .   .   .     .     .       "ownjar" Identifier
+  .   .   .     .     .     RefExpr
+  .   .   .     .     .       QualifiedRef
+  .   .   .     .     .         "index" Identifier
+  .   .   .     .     .   RefExpr
+  .   .   .     .     .     IndexedRef
+  .   .   .     .     .       QualifiedRef
+  .   .   .     .     .         "jar" Identifier
+  .   .   .     .     .       RefExpr
+  .   .   .     .     .         QualifiedRef
+  .   .   .     .     .           "index" Identifier
+  .   .   .     .     . AssignStmt
+  .   .   .     .     .   IndexedRef
+  .   .   .     .     .     QualifiedRef
+  .   .   .     .     .       "jar" Identifier
+  .   .   .     .     .     RefExpr
+  .   .   .     .     .       QualifiedRef
+  .   .   .     .     .         "index" Identifier
+  .   .   .     .     .   RefExpr
+  .   .   .     .     .     QualifiedRef
+  .   .   .     .     .       "marble" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass156.java
+// PA1 parse Stmt this ref pass
+class LegalStmt {
+   void main () {
+       this(3,4);
+       this[3] = 4; 
+   }
+}
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "LegalStmt" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "main" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [2]
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     this
+  .   .   .   ExprList [2]
+  .   .   .   . LiteralExpr
+  .   .   .   .   "3" IntLiteral
+  .   .   .   . LiteralExpr
+  .   .   .   .   "4" IntLiteral
+  .   .   . AssignStmt
+  .   .   .   IndexedRef
+  .   .   .     QualifiedRef
+  .   .   .       this
+  .   .   .     LiteralExpr
+  .   .   .       "3" IntLiteral
+  .   .   .   LiteralExpr
+  .   .   .     "4" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass158.java
+// PA1 parse refs pass
+class Test {
+
+    void p() {
+        a = true;
+        a [b] = c;
+        p ();
+        a.b[3] = d;
+        c.p(e);
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [5]
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "a" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "true" BooleanLiteral
+  .   .   . AssignStmt
+  .   .   .   IndexedRef
+  .   .   .     QualifiedRef
+  .   .   .       "a" Identifier
+  .   .   .     RefExpr
+  .   .   .       QualifiedRef
+  .   .   .         "b" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "c" Identifier
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     "p" Identifier
+  .   .   .   ExprList [0]
+  .   .   . AssignStmt
+  .   .   .   IndexedRef
+  .   .   .     QualifiedRef
+  .   .   .       "a" Identifier
+  .   .   .       ."b" Identifier
+  .   .   .     LiteralExpr
+  .   .   .       "3" IntLiteral
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "d" Identifier
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     "c" Identifier
+  .   .   .     ."p" Identifier
+  .   .   .   ExprList [1]
+  .   .   .   . RefExpr
+  .   .   .   .   QualifiedRef
+  .   .   .   .     "e" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass159.java
+// PA1 parse decl pass
+class Test {
+
+    int [] a;
+    Test [] t;
+
+    void p() {
+        void x = y;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [2]
+  .   . (public) FieldDecl
+  .   .   ArrayType
+  .   .     INT BaseType
+  .   .   "a" Identifier
+  .   . (public) FieldDecl
+  .   .   ArrayType
+  .   .     ClassType
+  .   .       "Test" Identifier
+  .   .   "t" Identifier
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     VOID BaseType
+  .   .   .     "x" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "y" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass160.java
+// PA1 parse refs pass
+class Test {
+
+    void p() {
+        A a = 23;
+	boolean b = c;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [2]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ClassType
+  .   .   .       "A" Identifier
+  .   .   .     "a" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "23" IntLiteral
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     BOOLEAN BaseType
+  .   .   .     "b" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "c" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass161.java
+// PA1 parse assign pass
+class Test {
+
+    void p() {
+        a = b;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "a" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass162.java
+// PA1 parse call pass
+class Test {
+
+    void p(int a, boolean b) {
+        p(a,b);
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [2]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "a" Identifier
+  .   .   . ParameterDecl
+  .   .   .   BOOLEAN BaseType
+  .   .   .   "b" Identifier
+  .   .   StmtList [1]
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     "p" Identifier
+  .   .   .   ExprList [2]
+  .   .   .   . RefExpr
+  .   .   .   .   QualifiedRef
+  .   .   .   .     "a" Identifier
+  .   .   .   . RefExpr
+  .   .   .   .   QualifiedRef
+  .   .   .   .     "b" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass163.java
+// PA1 parse decl pass
+class Test {
+
+    void p(int a) {
+        Test [ ]  v = a;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "a" Identifier
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ArrayType
+  .   .   .       ClassType
+  .   .   .         "Test" Identifier
+  .   .   .     "v" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "a" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass164.java
+// PA1 parse assign pass
+class Test {
+
+    void p(int a) {
+        Test [ a + 1]  = a * 3;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "a" Identifier
+  .   .   StmtList [1]
+  .   .   . AssignStmt
+  .   .   .   IndexedRef
+  .   .   .     QualifiedRef
+  .   .   .       "Test" Identifier
+  .   .   .     BinaryExpr
+  .   .   .       "+" Operator
+  .   .   .         RefExpr
+  .   .   .           QualifiedRef
+  .   .   .             "a" Identifier
+  .   .   .         LiteralExpr
+  .   .   .           "1" IntLiteral
+  .   .   .   BinaryExpr
+  .   .   .     "*" Operator
+  .   .   .       RefExpr
+  .   .   .         QualifiedRef
+  .   .   .           "a" Identifier
+  .   .   .       LiteralExpr
+  .   .   .         "3" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass165.java
+// PA1 parse call pass
+class Test {
+
+    void p(int a) {
+	C c = new C();
+	c.p(2,3);
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "a" Identifier
+  .   .   StmtList [2]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ClassType
+  .   .   .       "C" Identifier
+  .   .   .     "c" Identifier
+  .   .   .   NewObjectExpr
+  .   .   .     ClassType
+  .   .   .       "C" Identifier
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     "c" Identifier
+  .   .   .     ."p" Identifier
+  .   .   .   ExprList [2]
+  .   .   .   . LiteralExpr
+  .   .   .   .   "2" IntLiteral
+  .   .   .   . LiteralExpr
+  .   .   .   .   "3" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass166.java
+// PA1 parse assign pass
+class Test {
+
+    void p(int a) {
+	this.p(2,3);
+	a.v[3] = 4;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [1]
+  .   .   . ParameterDecl
+  .   .   .   INT BaseType
+  .   .   .   "a" Identifier
+  .   .   StmtList [2]
+  .   .   . CallStmt
+  .   .   .   QualifiedRef
+  .   .   .     this
+  .   .   .     "p" Identifier
+  .   .   .   ExprList [2]
+  .   .   .   . LiteralExpr
+  .   .   .   .   "2" IntLiteral
+  .   .   .   . LiteralExpr
+  .   .   .   .   "3" IntLiteral
+  .   .   . AssignStmt
+  .   .   .   IndexedRef
+  .   .   .     QualifiedRef
+  .   .   .       "a" Identifier
+  .   .   .       ."v" Identifier
+  .   .   .     LiteralExpr
+  .   .   .       "3" IntLiteral
+  .   .   .   LiteralExpr
+  .   .   .     "4" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass167.java
+// PA1 parse assign pass
+class Test {
+
+    void p() {
+	x.y = z;
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . AssignStmt
+  .   .   .   QualifiedRef
+  .   .   .     "x" Identifier
+  .   .   .     ."y" Identifier
+  .   .   .   RefExpr
+  .   .   .     QualifiedRef
+  .   .   .       "z" Identifier
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass168.java
+// PA1 parse decl pass
+class Test {
+
+    void p() {
+	int a = 3;
+	int [] b = new int[4];
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [2]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     INT BaseType
+  .   .   .     "a" Identifier
+  .   .   .   LiteralExpr
+  .   .   .     "3" IntLiteral
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ArrayType
+  .   .   .       INT BaseType
+  .   .   .     "b" Identifier
+  .   .   .   NewArrayExpr
+  .   .   .     INT BaseType
+  .   .   .     LiteralExpr
+  .   .   .       "4" IntLiteral
+=============================================
+
+<==============================Starting the Next File: ==============================>
+/afs/cs.unc.edu/project/courses/comp520-s12/Submit/duozhao/pa2/tests/1/pass169.java
+// PA1 parse new pass
+class Test {
+
+    void p() {
+	Foo [] foo = new Foo [10];
+    }
+}
+
+
+********** Duo's miniJava Compiler (Version 1.0) **********
+Syntactic Analysis Get Started...
+======= AST Display =========================
+Package
+  ClassDeclList [1]
+  . ClassDecl
+  .   "Test" Identifier
+  .   FieldDeclList [0]
+  .   MethodDeclList [1]
+  .   . (public) MethodDecl
+  .   .   VOID BaseType
+  .   .   "p" Identifier
+  .   .   ParameterDeclList [0]
+  .   .   StmtList [1]
+  .   .   . VarDeclStmt
+  .   .   .   VarDecl
+  .   .   .     ArrayType
+  .   .   .       ClassType
+  .   .   .         "Foo" Identifier
+  .   .   .     "foo" Identifier
+  .   .   .   NewArrayExpr
+  .   .   .     ClassType
+  .   .   .       "Foo" Identifier
+  .   .   .     LiteralExpr
+  .   .   .       "10" IntLiteral
+=============================================

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>A5 Index Page</title>
+<style type="text/css">
+	
+tr:nth-child(odd){
+	background-color: lightyellow;
+}
+tr:nth-child(even){
+	background-color: lightblue;
+}
+</style>
+</head>
+
+<body>
+	<div>
+	<h2>RESTful Interfaces to Find My Roommate</h2>
+	<table border='1'>
+		<thead>
+			<tr>
+				<th>HTTP Method</th>
+				<th>URL Form</th>
+				<th>Parameters</th>
+				<th>Result structure</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>POST</td>
+				<td>/user.php</td>
+					<td><dl>
+						<dt>uid</dt>
+							<dd>The unique username specified by the user.</dd>
+						<dt>firstName, LastName</dt>
+							<dd>The name of a user</dd>
+						<dt>gender</dt>
+							<dd>male/ female</dd>
+						<dt>yearOfEnroll</dt>
+							<dd>The year of a user's enrollment</dd>
+						<dt>dateofBirth</dt>
+							<dd>Date format: YYYY-MM-DD</dd>
+						<dt>musicListing</dt>
+						<dt>visitors</dt>
+						<dt>cleanness</dt>
+						<dt>sleepTime</dt>
+							<dd>HH:MM</dd>
+						<dt>wakeTime</dt>
+							<dd>HH:MM</dd>
+						<dt>aboutMe</dt>
+							<dd>The plain text of a user's self-description</dd>
+						<dt>profilePhotoURL</dt>
+							<dd>The address of the photo of a user</dd>
+						<dt>majors</dt>
+							<dd>A list of a student's majors</dd>
+						<dt>applyDorms</dt>
+							<dd>A list of a user's desirable dorms</dd>
+						</dl></td>
+					<td>A user object (see below)</td>
+				<td>Create a new user record from the information
+					provided by the parameters. If successful, the result is the
+					corresponding user object with the user id information. 400
+					Bad request generated if the creation was unsuccessful. 409
+					conflict generated if an identical username already exists.</td>
+			</tr>
+
+			<tr>
+				<td>POST</td>
+				<td>/user.php/&lt;id&gt;</td>
+				<td>Same as above</td>
+				<td>A user object (see below)</td>
+				<td>Update an existing user's record with the new information
+					provided. 404 Not Found generated if id is not recognized.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/user.php</td>
+				<td>None recognized</td>
+				<td>An array of strings</td>
+				<td>Retrieve the alphabetic ID's of all campus users</td>
+			</tr>
+
+			<tr>
+				<td>GET</td>
+				<td>/user.php/&lt;id&gt;</td>
+				<td>None recognized</td>
+				<td>A user object (See below)</td>
+				<td>Retrieve the information about a specific reisdent
+					indicated by &lt;id&gt;. Majors is an array of the possible
+					multiple majors of the user. ApplyDorms is an array of dorms
+					that the user considers appropriate. 404 Not Found returned if
+					uid specified is not legal.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/user.php/&lt;id&gt;</td>
+				<td><dl>
+					<dt>delete</dt>
+					<dd>value ignored</dd>
+				</dl></td>
+				<td>True</td>
+				<td>Using the 'delete' parameter to delete an account specified
+					by id. The corresponding database record would also be deleted. The
+					id hold by this account is released, and the info is not available
+					for further matching. 404 Not Found returned if id specified is not legal.</td>
+			</tr>
+
+			<tr>
+				<td>GET</td>
+				<td>/dorm.php</td>
+				<td>None recognized</td>
+				<td>An array of dorm objects</td>
+				<td>Retrieve a complete list of dorm objects.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/dorm.php/&lt;id&gt;</td>
+				<td>None recognized</td>
+				<td>A dorm object</td>
+				<td>Retrieve a dorm object specified by &lt;id&gt;. 404 Not Found
+						returned if id specified is not legal.</td>
+			</tr>
+			
+			<tr>
+				<td>POST</td>
+				<td>/activeSearch.php/&lt;id&gt;</td>
+				<td><dl>
+					<dt>gender</dt>
+					<dt>major1</dt>
+					<dt>major2</dt>
+					<dt>major3</dt>
+					<dt>musicListing</dt>
+					<dt>visitors</dt>
+					<dt>cleanness</dt>
+					<dt>sleepTime</dt>
+					<dt>wakeTime</dt>
+				</dl>(All formats are supposed to match the user.php interface and user objects)</td>
+				<td>A array of five user objects</td>
+				<td>create or update an active search record and return the sorted result. 404 Not Found returned if id specified is not legal.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/activeSearch.php/&lt;id&gt;</td>
+				<td>None recognized</td>
+				<td>A array of five user objects</td>
+				<td>load/recover the most recent serch record. No actions if the record indicated by the id does not exist.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/activeSearch.php/&lt;id&gt;</td>
+				<td><dl>
+					<dt>delete</dt>
+					<dd>value ignored</dd>
+				</dl></td>
+				<td>True</td>
+				<td>delete the search record initiated by the user. No actions
+					if the record indicated by the id does not exist.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/passiveMatch.php/&lt;id&gt;</td>
+				<td>None recognized</td>
+				<td>A array of five uid's who match the user in ranked order</td>
+				<td>A passive match returns a list of uid's according to the
+					user's scores and rankings in the match list of others. No actions
+					if the record indicated by the id does not exist.</td>
+			</tr>
+			
+			<tr>
+				<td>GET</td>
+				<td>/rommateConfirmator.php/&lt;id&gt;</td>
+				<td><dl>
+					<dt>uid</dt>
+					<dd>the requester's id for roommate confirmation</dd>
+					<dt>isAccepted</dt>
+					<dd>a boolean variable</dd>
+				</dl></td>
+				<td>True</td>
+				<td>Accept or Reject a roommate request and update the corresponding
+					record, such as preventing the pair from other roommate matching.
+					400 Bad request generated if the request transaction does not
+					exist.</td>
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+<div>
+	<h2>JSON objects</h2>
+	<pre>A user object is JSON encoded as follows:</pre>
+	<blockquote>
+	
+	{uid: Integer, <br>
+	 first: String,<br>
+	 last: String,<br>
+	 gender: String Enum ["F","M"],<br>
+	 year: String Enum["fre","soph","jun","sen","grad","other"],<br>
+	 profilepic: String,<br>
+	 facebook: String,<br>
+	 phone: String,<br>
+ 	 email: String,<br>
+ 	 dob: String, <br>
+ 	 majors[{abbr:String, name:String},{abbr:String,name:String}]: array of major, <br>
+     dorms[{name:String},...,{name:String}]: array of dorms, <br>
+ 	 musiclistening: String Enum["headphone","speaker"],<br>
+ 	 visitor: String Enum["no","sometime","freq"],<br>
+ 	 cleanness: String Enum["daily","weekly","never"],<br>
+ 	 sleeppref: String Enum["before12","12-2","after2"],<br>
+ 	 wakepref: String Enum["before7","7-9","after9"],<br>
+ 	 studyhabits: String Enum["room","lib"],<br>
+ 	 about: String<br>
+	}
+</blockquote>
+	<pre>A dorm object is JSON encoded as follows: </pre>
+<blockquote>
+	{name: String, <br>
+	 style: String Enum["Apartment","Suite","Corridor"], <br>
+	 gender: String Enum["male","female","coed"], <br>
+	 community: String, <br>
+	 location: String <br>
+	}
+</blockquote>
+</div>
+	<div>
+		<p><a href="userSchema.json">JSON Schema for a user</a></p>
+		<p><a href="dormSchema.json">JSON Schema for a dorm</a></p>
+	</div>
+
+	<div>
+		<h2>Database Schema to Find My Roommate</h2>
+		<a href="db-design.txt">Link to database schema design.</a>
+	</div>
+
+</body>
+
+</html>

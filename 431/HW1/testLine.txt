@@ -1,0 +1,26 @@
+
+   		   			
+GET /path HTTP/1.22425265
+GET /path HTTP/1242324123.3
+GET /path/test.txt HTTP/1.0
+GET /path/public_html/test.txt HTTP/1.0
+GET /tab_test/test      HTTP/1.0
+GET /PATH/UPPERCASE.TXT HTTP/1.0
+GET /path/digits18.13_1313.314/ HTTP/1.0
+GeT /path HTTP/1.0
+blah /path/test.txt HTTP/1.0
+GET /badpath/test*boo HTTP/1.0
+GET /badpath/test?boo+test HTTP/1.0
+GET /no_version/test
+GET HTTP/1.0
+GET
+get /path/lowercase.txt HTTP/1.0
+GET /path/lower_case.txt HTML/1.0
+GET noabsolute/text.txt HTTP/1141.141
+GET /test/nodigits HTTP/9a.b
+GET /test/nodigits HTTP/9.b
+get noabsoult HTTX/9x.x
+GET noabsoult HTTX/9x.x
+GET /test/nodecimal HTTP/131
+GET /path/checkExtraToken HTTP/1.0 extra
+ GET /path HTTP/1.22425265

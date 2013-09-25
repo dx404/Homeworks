@@ -1,0 +1,34 @@
+//hello!
+/*TEST!*/
+/*TEST!*/
+/*TEST!*/
+/*TEST!*/
+class PA1Test {
+
+   public static void main(String [] args) {
+       int n = 3;
+	nm [] nm = kc [3];
+	this.nm();
+	this.nm(3 / this [true]);
+	nm(3 + this [true]);
+       n = 5 + n;
+	int[] nArray = new int[10];/*TEST!*/
+   }
+}
+//can I break this?
+class PA1Test {
+
+   private void main(String [] args) {
+       int n = 3;
+	nm [] nm = kc [3];
+	this.nm();
+	this.nm(3 / this [true]);
+	nm(3 + this [true]);
+       n = 5 + n;
+	int[] nArray = new int[10]; /*TEST!*/
+   }//hello
+}
+/*testtest
+ */
+/*d*dd/***d*/
+//dfdf

@@ -1,0 +1,17 @@
+//hello world;
+/*hello world*/
+//hello world;
+//hello world;
+//hello world;
+class PA1Test {
+
+   public static void main(String [] args) {
+       int n = 3;
+	nm [] nm = kc [3];
+	this.nm();
+	this.nm(3 / this [true]);
+	nm(3 + this [true]);
+       n = 5 + n;
+	int[] nArray = new int[10]; 
+   }
+}

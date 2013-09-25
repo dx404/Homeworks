@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+div.left-column {
+	top: 1cm;
+	width: 50%;	
+	
+}
+
+div.right-column {
+	position: absolute;
+	width: 40%;
+	top:0.2cm;
+	right:0.2cm;
+	height:500px;
+}
+
+[id$='table-div'] {
+	height: 560px;
+	overflow: auto;
+}
+
+.content tr:nth-child(odd){
+	background-color: lightyellow;
+}
+.content tr:nth-child(even){
+	background-color: lightblue;
+}
+table.cart {
+	text-align: center;
+}
+legend {
+	font: italic bold 21px arial, sans-serif;
+	color: Indigo;
+}
+button, select{
+	font-family:Helvetica;
+	font-size: 14px;
+	height: 30px;
+	margin:5px;
+}
+
+div.bottom-button{
+	float:right;
+}
+
+.textRight{
+	text-align:right;
+}
+
+.floatRight{
+	float:right;
+}

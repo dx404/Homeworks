@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "style": {
+            "type": "string",
+            "enum": [
+                "Apartment",
+                "Suite",
+                "Corridor"
+            ]
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "male",
+                "female",
+                "coed"
+            ]
+        },
+        "community": {
+            "type": "string"
+        },
+        "location": {
+            "type": "string"
+        }
+    }
+}

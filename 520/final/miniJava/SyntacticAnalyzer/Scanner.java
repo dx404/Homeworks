@@ -1,0 +1,293 @@
+package miniJava.SyntacticAnalyzer;
+
+import miniJava.SyntacticAnalyzer.SourceFile;
+import miniJava.SyntacticAnalyzer.Token;
+import miniJava.SyntacticAnalyzer.SyntaxError;
+import miniJava.ErrorReporter;
+
+public final class Scanner {
+
+	private SourceFile sourceFile;
+	private boolean debug;
+	
+	private boolean isStdEnv;//pa3 added
+
+	private char currentChar;
+	private StringBuffer currentSpelling;
+	private boolean currentlyScanningToken;
+
+	private boolean isLetter(char c) {
+		return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
+	}
+
+	private boolean isDigit(char c) {
+		return (c >= '0' && c <= '9');
+	}
+
+	public Scanner(SourceFile source) {
+		sourceFile = source;
+		currentChar = sourceFile.getSource();
+		debug = false;
+		
+		this.isStdEnv = false; //pa3 added
+	}
+	
+	public Scanner(SourceFile source, boolean isStdEnv) {
+		sourceFile = source;
+		currentChar = sourceFile.getSource();
+		debug = false;
+		
+		this.isStdEnv = isStdEnv; //pa3 added, allows underscore as the inital letter
+	}
+
+	public void enableDebugging() {
+		debug = true;
+	}
+
+
+	private void takeIt() { //updating current character
+		if (currentlyScanningToken)
+			currentSpelling.append(currentChar);
+		currentChar = sourceFile.getSource();
+	}
+
+	private int scanSeparator() {
+		//int flag = -1; 
+		/*1 for scan success, 0 for general failure, 
+		2 for line comments
+		3 for block comments
+		4 for other while space
+		-1 for '/' token.
+		*/
+		switch (currentChar) {
+		case '/':{
+			takeIt();
+			switch(currentChar){
+			case '/': { //Line Comments
+				do takeIt();
+				while(currentChar != '\n' && currentChar != '\u0000');
+			}
+			return 2;
+
+			case '*': { //Block Commnets
+				takeIt();
+				while (true){
+					if(currentChar == '\u0000'){
+						System.out.println("===========ERROR=================");
+						System.exit(4);
+						return -2;
+					}
+					if(currentChar != '*'){
+						takeIt();
+						continue;
+					}
+					takeIt();
+					if(currentChar == '/'){
+						takeIt();
+						break;
+					}
+						
+				}
+			}
+			return 3;
+
+			default:  //Token scanned instead
+				return -1;
+			}
+		}
+		
+		case ' ': case '\n': case '\r': case '\t':{
+			do{
+				takeIt();
+			}
+			while(currentChar == ' ' ||
+					currentChar == '\n' ||
+					currentChar == '\r' ||
+					currentChar == '\t');
+			return 4;
+		}
+		default: 
+			return 0;
+		}
+	}
+	
+	private int scanToken() {
+		if(isLetter(currentChar)
+				||(isStdEnv && currentChar == '_')   
+				//pa3 added the initial letter can be underscore as stand
+				){
+			takeIt();
+			while (isLetter(currentChar) || 
+					isDigit(currentChar) || 
+					currentChar == '_')
+				takeIt();
+			//currentSpelling matches keywords. 
+			return Token.IDENTIFIER;
+		}
+		
+		if(isDigit(currentChar)){
+			takeIt();
+			while (isDigit(currentChar))
+				takeIt();
+			return Token.INTLITERAL;
+		}
+		
+		switch (currentChar) {
+
+		case '+': 
+			takeIt();
+			if (currentChar == '+'){
+				takeIt();
+				return Token.INCREMENT; //final added
+			}
+			return Token.ADDITIVE;
+		
+		case '-':
+			takeIt();
+			if(currentChar == '-'){
+				takeIt();
+				return Token.DECREMENT; //final added accept --
+			}
+			return Token.ADDITIVE;
+			
+		case '*':  case '/':
+			takeIt();
+			return Token.MULTIPLICATIVE;
+			
+		case '>':  case '<':  
+			takeIt();
+			if(currentChar == '=')
+				takeIt();
+			return Token.RELATIONAL;
+			
+		case '!':
+			takeIt();
+			if(currentChar == '='){
+				takeIt();
+				return Token.EQUALITY;
+			}
+			return Token.UNARY;
+			
+		case '=': 
+			takeIt();
+			if(currentChar == '='){
+				takeIt();
+				return Token.EQUALITY;
+			}
+			else{
+				return Token.BECOMES;
+			}	
+		case '&':
+			takeIt();
+			if(currentChar == '&'){
+				takeIt();
+				return Token.CONJUNCTION;
+			}
+			break;
+			
+		case '|':
+			takeIt();
+			if(currentChar == '|'){
+				takeIt();
+				return Token.DISJUNCTION;
+			}
+			break;
+			
+		case '.':
+			takeIt();
+			return Token.DOT;
+
+		case ':':
+			takeIt();
+			return Token.COLON;
+
+		case ';':
+			takeIt();
+			return Token.SEMICOLON;
+
+		case ',':
+			takeIt();
+			return Token.COMMA;
+
+		case '(':
+			takeIt();
+			return Token.LPAREN;
+
+		case ')':
+			takeIt();
+			return Token.RPAREN;
+
+		case '[':
+			takeIt();
+			return Token.LBRACKET;
+
+		case ']':
+			takeIt();
+			return Token.RBRACKET;
+
+		case '{':
+			takeIt();
+			return Token.LCURLY;
+
+		case '}':
+			takeIt();
+			return Token.RCURLY;
+
+		case SourceFile.eot:
+			return Token.EOT;
+
+		default:
+			takeIt();
+			return Token.ERROR;
+		}
+		return Token.ERROR;
+	}
+
+	public Token scan () {
+		//System.out.println(currentChar);
+		
+		Token tok;
+		SourcePosition pos;
+		int kind;
+
+		currentlyScanningToken = false;
+		int scanSeparatorStatus = 1;
+		while (	currentChar == ' ' ||
+				currentChar == '\n' ||
+				currentChar == '\r' ||
+				currentChar == '\t' ||
+				currentChar == '/'
+				){
+			scanSeparatorStatus = scanSeparator(); 
+			if(scanSeparatorStatus == 2 || scanSeparatorStatus == 3){
+			}
+			
+			if(scanSeparatorStatus == -1)
+				break;
+		}
+		currentlyScanningToken = true;
+		currentSpelling = new StringBuffer("");
+		pos = new SourcePosition();
+		pos.start = sourceFile.getCurrentLine();
+
+		if(scanSeparatorStatus != -1)
+			kind = scanToken();
+		else{
+			//System.out.println("----- / ------here");
+			
+			kind = Token.MULTIPLICATIVE;
+			currentSpelling.append('/');
+		}
+
+		pos.finish = sourceFile.getCurrentLine();
+		//may be subject to adjust \+- 1; does not matter here. 
+		tok = new Token(kind, currentSpelling.toString(), pos);
+		
+		//enableDebugging();
+		if (debug)
+			System.out.println(tok + "  --->  " + Token.tokenTable[tok.kind]);
+		
+		return tok;
+	}
+
+}

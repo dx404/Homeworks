@@ -1,0 +1,129 @@
+final results for duozhao
+PA3/PA4 contextual analysis regression tests:  1 point each
+PA4 pass4xx regression tests:  2 points each
+New tests: pass5xx 3 points and fail5xx 2 points
+=========================================================================
+
+miniJava directory present in submission directory.
+Using mJAM from submission directory.
+miniJava compiler build succeeded.
+mJAM interpreter build succeeded.
+
+Starting Tests ... 
+Test fail301: was correctly rejected.                          Points = 1
+Test fail302: was correctly rejected.                          Points = 1
+Test fail303: was correctly rejected.                          Points = 1
+Test fail304: was correctly rejected.                          Points = 1
+Test fail306: was correctly rejected.                          Points = 1
+Test fail307: was correctly rejected.                          Points = 1
+Test fail309: was correctly rejected.                          Points = 1
+Test fail310: was correctly rejected.                          Points = 1
+Test fail311: was correctly rejected.                          Points = 1
+Test fail312: was correctly rejected.                          Points = 1
+Test fail313: was correctly rejected.                          Points = 1
+Test fail314: was correctly rejected.                          Points = 1
+Test fail315: was correctly rejected.                          Points = 1
+Test fail316: was correctly rejected.                          Points = 1
+Test fail317: was correctly rejected.                          Points = 1
+Test fail318: was correctly rejected.                          Points = 1
+Test fail320: was correctly rejected.                          Points = 1
+Test fail321: was correctly rejected.                          Points = 1
+Test fail322: was correctly rejected.                          Points = 1
+Test fail323: was correctly rejected.                          Points = 1
+Test fail324: was correctly rejected.                          Points = 1
+Test fail326: was correctly rejected.                          Points = 1
+Test fail327: was correctly rejected.                          Points = 1
+Test fail330: was correctly rejected.                          Points = 1
+Test fail331: was correctly rejected.                          Points = 1
+Test fail332: was correctly rejected.                          Points = 1
+Test fail333: was correctly rejected.                          Points = 1
+Test fail335: was correctly rejected.                          Points = 1
+Test fail336: was correctly rejected.                          Points = 1
+Test fail337: was correctly rejected.                          Points = 1
+Test fail338: was correctly rejected.                          Points = 1
+Test fail339: was correctly rejected.                          Points = 1
+Test fail340: was correctly rejected.                          Points = 1
+Test fail341: was correctly rejected.                          Points = 1
+Test fail342: was correctly rejected.                          Points = 1
+Test fail343: was correctly rejected.                          Points = 1
+Test fail352: was correctly rejected.                          Points = 1
+Test fail353: was correctly rejected.                          Points = 1
+Test fail354: was correctly rejected.                          Points = 1
+Test fail355: was correctly rejected.                          Points = 1
+Test fail361: was correctly rejected.                          Points = 1
+Test fail362: was correctly rejected.                          Points = 1
+Test fail363: was correctly rejected.                          Points = 1
+Test fail364: was correctly rejected.                          Points = 1
+Test fail365: was correctly rejected.                          Points = 1
+Test fail366: was correctly rejected.                          Points = 1
+Test fail367: was correctly rejected.                          Points = 1
+Test fail368: was correctly rejected.                          Points = 1
+Test fail401: was correctly rejected.                          Points = 1
+Test fail402: was correctly rejected.                          Points = 1
+Test pass301: correctly accepted.                              Points = 1
+Test pass302: correctly accepted.                              Points = 1
+Test pass303: correctly accepted.                              Points = 1
+Test pass304: correctly accepted.                              Points = 1
+Test pass306: correctly accepted.                              Points = 1
+Test pass307: correctly accepted.                              Points = 1
+Test pass308: correctly accepted.                              Points = 1
+Test pass309: correctly accepted.                              Points = 1
+Test pass315: correctly accepted.                              Points = 1
+Test pass316: correctly accepted.                              Points = 1
+Test pass321: correctly accepted.                              Points = 1
+Test pass323: correctly accepted.                              Points = 1
+Test pass341: correctly accepted.                              Points = 1
+Test pass342: correctly accepted.                              Points = 1
+Test pass343: correctly accepted.                              Points = 1
+Test pass344: correctly accepted.                              Points = 1
+Test pass345: correctly accepted.                              Points = 1
+Test pass346: correctly accepted.                              Points = 1
+Test pass347: correctly accepted.                              Points = 1
+Test pass348: correctly accepted.                              Points = 1
+Test pass349: correctly accepted.                              Points = 1
+Test pass350: correctly accepted.                              Points = 1
+Test pass351: correctly accepted.                              Points = 1
+Test pass352: correctly accepted.                              Points = 1
+Test pass353: correctly accepted.                              Points = 1
+Test pass354: correctly accepted.                              Points = 1
+Test pass355: correctly accepted.                              Points = 1
+Test pass356: correctly accepted.                              Points = 1
+Test pass357: correctly accepted.                              Points = 1
+Test pass401: mJAM program yields correct result!              Points = 2
+Test pass402: mJAM program yields correct result!              Points = 2
+Test pass403: mJAM program yields correct result!              Points = 2
+Test pass404: mJAM program yields correct result!              Points = 2
+Test pass405: mJAM program yields correct result!              Points = 2
+Test pass406: mJAM program yields correct result!              Points = 2
+Test pass407: mJAM program yields correct result!              Points = 2
+Test pass408: mJAM program yields correct result!              Points = 2
+Test pass409: mJAM program yields correct result!              Points = 2
+Test pass410: mJAM program yields correct result!              Points = 2
+Test pass411: mJAM program yields correct result!              Points = 2
+Test pass412: mJAM program yields correct result!              Points = 2
+Test pass413: mJAM program yields correct result!              Points = 2
+Test pass414: mJAM program yields correct result!              Points = 2
+Test pass415: mJAM program yields correct result!              Points = 2
+Test pass416: mJAM program yields correct result!              Points = 2
+Test pass417: mJAM program yields correct result!              Points = 2
+Test pass418: mJAM program yields correct result!              Points = 2
+Test pass419: mJAM program yields correct result!              Points = 2
+Test pass420: mJAM program yields correct result!              Points = 2
+Test pass421: mJAM program yields correct result!              Points = 2
+Test pass501: mJAM program yields correct result!              Points = 3
+Test pass502: mJAM program yields correct result!              Points = 3
+Test pass503: FAILED to be accepted.                           Points = 0
+Test pass504: FAILED to be accepted.                           Points = 0
+Test pass505: mJAM program yields correct result!              Points = 3
+Test pass506: FAILED to be accepted.                           Points = 0
+
+
+Fail testcases:   Correct: 50   Incorrect: 0
+Pass testcases:   Correct: 53   Incorrect: 3
+
+Base Project points earned: 130 (Max = 139)
+
+Additional into for  duozhao
+Compiler extra credit:  20
+Final exam:   65 / 75
+Final grade:  H

@@ -1,0 +1,79 @@
+/**
+ * COMP 520
+ * simple PA3 test 
+ */
+class A{
+	 B ab;
+	private int a;
+	private int b;
+}
+
+class B{
+	private A ba;
+	int foo(){
+		ba = ba.ab.ba;
+		return 8;
+	}
+}
+
+
+class MainClass {
+
+	int a;
+	int bbb;
+
+	OtherClass oc;
+	MainClass mc;
+	int foo(int y){
+		int x = 5;
+		while (x > 5 || x <= 5 && 884 < 99)
+			x = 6;
+		if ( x <= 5 ){
+			System.out.println(x);
+		}
+
+		while (x < 5){
+			int yy = 6;
+		}
+		while (x >= 5){
+			int yy = 6;
+		}
+		while (x <= 5){
+			int yy = 6;
+		}
+		return 8;
+	}
+
+	public static void main (String [] vargs999) {
+		//void a = 5;
+		int x = 1 + 2;
+		int y = 3 + 2 * x;
+		//boolean y = 6;
+
+		OtherClass b = new OtherClass();
+		b.show(2, 9);
+	}
+}
+
+class OtherClass { 
+	MainClass mc;
+	int aa;
+	MainClass mm;
+
+	public void show(int aac, int bb) {
+		OtherClass occ = new OtherClass();
+		int mc = 9;
+		boolean bl= false;
+		int[] kh = new int[9];
+		{{{boolean aa = true || false && !!!!!!bl; }}}
+		int aa = 5 + mc;
+		kh[-9] = 9;
+		occ.mc.oc.mc.oc.mc.oc.aa = occ.mc.oc.mc.oc.mc.oc.mc.a - (occ.mc.oc.mc.a + occ.mc.a )/(((occ.mc.oc.mc.oc.mc.oc.mc.a - (occ.mc.oc.mc.a + occ.mc.a ))));
+		System.out.println(aa);
+		//System.out.println(mc.a);
+	}
+	int fooo(int x, int y){
+		//void m = 8;
+		return 9;
+	}
+}

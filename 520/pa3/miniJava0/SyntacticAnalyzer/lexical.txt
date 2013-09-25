@@ -1,0 +1,21 @@
+Original Grammer
+
+Token 		::= id | num | Operator | . | : | ; | , | ( | ) | [ | ] | { | } 
+id 			::= 	Letter ( Letter | Digit | _ )*	
+num 			::= 	Digit Digit*    //Integer-Literal
+Operator 	::= binop | unop
+binop 		::= 	> | < | == | <= | >= | != | && | || | ! | + | - | * | / 
+unop 		::=	! | -
+
+Separator	::= Comments | space | eol 
+Comments		::= // Graphics* eol | /* Not Consecutive*/ */
+
+Collective Ones 
+
+Token		::= Letter ( Letter | Digit | _ )* |	Digit Digit* |
+				. | : |; | , | ( | ) | [ | ] | { | } |
+				+ | - | * | / | 
+				(> | < | = | !) =? |
+				&& | || 
+Separator	::= / (/ Graphics* eol | * Not Consecutive*/ */)
+				

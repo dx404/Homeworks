@@ -1,0 +1,59 @@
+User:
+uid: INT, primary key
+username: CHAR(25), user login name
+password: CHAR(25), login password of the user
+first: CHAR(25), first name of the user
+last: CHAR(25), last name of the user
+gender: ENUM('M','F')
+year: ENUM('fre','soph','jun','sen','grad','other')
+profilepic:VARCHAR(128),URL of user's profile picture, possibly null
+facebook:VARCHAR(128),URL of the facebook page link, possibly null
+phone:VARCHAR(16), phone number of user, possibly null
+email: VARCHAR(25), email of user, possibly null
+dob: DATETIME, date of birth
+musiclistening:ENUM('headphone','speaker')
+visitor:ENUM('no','sometime','freq')
+cleanness:ENUM('daily','weekly','never')
+sleeppref:ENUM('before12','12-2','after2')
+wakepref:ENUM('before7','7-9','after9')
+studyhabits:ENUM('room','lib')
+about: char (256), user self-introduction
+
+Dorm:
+did: INT, primary key
+name: VARCHAR(25), name of the dorm
+style: ENUM('Apartment','Suite','Corridor')
+gender: ENUM('male','female','coed')
+community: VARCHAR(25), community belongs to
+location: VARCHAR(100), address of the dorm
+
+Major:
+mid: INT, primary key
+abbr:VARCHAR(4), abbreviation of major name
+name: VARCHAR(25), name of major
+
+UserMajorIn: (many-to-many, all records about the majors of each user)
+id: INT, primary key
+uid: INT, foreign key to User table
+mid: INT, foreign key yo Major table
+
+UserDormInterest: (many-to-many, all records about the dorms each user interest in living)
+id: INT, primary key
+uid: INT, foreign key to User table
+did: INT, foreign ket to Dorm table
+
+LastSearchRecord: (used to cache user's last search options)
+uid: INT, primary key and foreign key to User table
+gender: ENUM('M','F')
+ageupper: INT, upper limit of age preference
+agelower: INT, lower limit of age preference
+year: ENUM('fre','soph','jun','sen','grad','other')
+major1: INT, mid of first major preference 
+major2: INT, mid of second major preference 
+major3: INT, mid of third major preference 
+musiclistening:ENUM('headphone','speaker')
+visitor:ENUM('no','sometime','freq')
+cleanness:ENUM('daily','weekly','never')
+sleeppref:ENUM('before12','12-2','after2')
+wakepref:ENUM('before7','7-9','after9')
+studyhabits:ENUM('room','lib')

@@ -1,0 +1,20 @@
+#page-head-div {
+	height: 35px;
+	border: thin solid black;
+	min-width: 200px;
+	overflow: auto;
+	background-color: #008B8B;
+	padding: 5px;
+	margin: 10px;
+	font: italic bold 20pt "Times New Roman", Georgia, Serif;
+	color: white;
+}
+
+#page-head-title {
+	float: left;
+	margin-left: 3px;
+}
+
+#page-head-greetings {
+	float: right;
+}

@@ -1,0 +1,3 @@
+Further development
+1. One folder for each dorm, each dorm contains multiple pictures
+2. Support pictures with various format. 

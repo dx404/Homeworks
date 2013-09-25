@@ -1,0 +1,113 @@
+{
+    "type": "object",
+    "properties": {
+        "uid": {
+            "type": "integer"
+        },
+        "first": {
+            "type": "string"
+        },
+        "last": {
+            "type": "string"
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "F",
+                "M"
+            ]
+        },
+        "year": {
+            "type": "string",
+            "enum": [
+                "fre",
+                "soph",
+                "jun",
+                "sen",
+                "grad",
+                "other"
+            ]
+        },
+        "profilepic": {
+            "type": "string"
+        },
+        "facebook": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "dob": {
+            "type": "string"
+        },
+        "majors": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": "string",
+                    "abbr": "string"
+                }
+            }
+        },
+        "dorms": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "musiclistening": {
+            "type": "string",
+            "enum": [
+                "headphone",
+                "speaker"
+            ]
+        },
+        "visitor": {
+            "type": "string",
+            "enum": [
+                "no",
+                "sometime",
+                "freq"
+            ]
+        },
+        "cleanness": {
+            "type": "string",
+            "enum": [
+                "daily",
+                "weekly",
+                "never"
+            ]
+        },
+        "sleeppref": {
+            "type": "string",
+            "enum": [
+                "before12",
+                "12-2",
+                "after2"
+            ]
+        },
+        "wakepref": {
+            "type": "string",
+            "enum": [
+                "before7",
+                "7-9",
+                "after9"
+            ]
+        },
+        "studyhabits": {
+            "type": "string",
+            "enum": [
+                "room",
+                "lib"
+            ]
+        },
+        "about": {
+            "type": "string"
+        }
+    }
+}
+

@@ -1,0 +1,57 @@
+MiniJava Compiler User Guide
+Author: Duo Zhao (duo.zhao@unc.edu)
+Abstract: 
+	MiniJava is a subset and educational version of Java language. In my final project, the three major phases of Compiler building is completed, i.e. Syntactic Analysis, Contextual Analysis and code generation. Also, I have made some modification of the Abstract Syntax Tree and facilitate it with some enhanced features to accommodate it with the three phases of compilation. Beyond the regular part of the four checkpoints, I also include some extra-credit features, such as the supporting of null value, for-statement, overloading function and short-circuit evaluation. Some other parts are in the development toward the final stage, such as Inheritance of fields and methods. Some features of personal interest has also been equipped with miniJava, such the support for declaration of multi-variable in a single statement. 
+
+1. Abstract Syntax Tree 
+	1.1 Reference class
+		I have redesigned the reference class since the parser stage. Qualified Reference has been updated to a category of classes inherited from ContinuedRef, which is similar to the DeRef class during Checkpoint 3. When a list of tokens go through the parsers, the reference part will parser into an layered reference, including SimpleRef, ThisRef, MethodRef, FieldRef, SubFieldRef, SubMethodRef, IndexRef and ExprRef. In the identification stage, the SimpleRef will be further identified into LocalRef, FieldRef and ClassRef. The basic idea here is to treat the dot token(.) as an operator. Therefore, some extended and more tolerant features will occur. For instance, (a).b and a.b[3].c, a.b(0).c is disallowed in strict miniJava grammar. However, with the introduction of expression-like reference, these forms of reference will be correctly parsed and target the natural use of reference. In this scheme, CallExpr is simply a special kind of MethodRef or subMethodRef, and all actions of CallExpr is go through MethodRef and SubMethodRef. CallExpr is reserved for its common usage but only encapsulate the corresponding method reference. 
+       These refined reference categories are more suitable for its corresponding declarations. With its usage, many instanceof operations during later stage can be easily avoided. 
+     
+	1.2 Statements and Expressions
+        I've introduced the expression statement(ExprStmt) to include CallExpr and AssignExpr as special expression statement and CallStmt and AssignStmt integrated into ExprStmt. These has the same features as the original statement. for my current stage of development, AssignExpr can be singly parsed and identified, but the encoder hasn't been implemented independent feature. 
+        VarDecl has been extend to VarDeclListStmt. In this sense, code as "int x = 5, y = x;" is legal now and it has complete support. 
+        ForStmt has been implemented and support its regular feature. The initial statement can be a declaration list or a list of expression statement separated by a comma.
+		for(int i = 1, j = 1; i<10 && j < 10; i = i + 1, j = j + 1) { }
+		is an legal expression which is the same as the java language. 
+       One common use the the increment(++) and decrement operator(--) in for statement. There IncrementExpr and DecrementExpr has been developed into identification and type checking stage. Its code generation support will be done in the near future. 
+
+      1.3 Some Enhanced methods with AST
+          Reference classes are equipped with getType(), getDecl(), getIDT(), getRTE(). Since during and after the identification stage, it is frequent to retrieve the corresponding type, declaration and run-time entity. To avoid the  multiple-dot reference, these methods abstracts the details of after the id-declaration binding usage. 
+       
+      1.4 Other Minor modification
+		NullLiteral is for parse null. and NullStmt is to allow ';;' like statement, which is inspired in 'for(;;)' if the initial statement or update statement is absent, although the consecutive semi-colon in for is not a null statement but a implicit true-boolean-literal expression. All Declaration and Reference has a type, to achieve this, I introduced a ClassDefType to make a class name has a type, but no other than its generic use. 
+
+2. Regular Part Specification 
+	2.1 Identification
+	Each class is equipped with its only identification table and is created during its creation. during the identification stage, the type of a field or return-type of a method may be further identified. for SimpleRef class, the identification is done using its current executing ID table. for ContinuedRef(DeRef-like), the identification is
+done recursively. for the current identifier, it retrieve and a identification table from its previous reference, which is provided by the type of the declaration of the reference. 
+    For instance, if a is an array and a.length is done by loading the ID table of a. since a is an array type. An array type provides no fields other than 'length', so length is resolved by a's type-providing ID table. and if a.size is called, size cannot be resolved with a's type-sponsor Id table
+
+	2.2 Type checking 
+    Type checking is done with the implement type classes with an overloading equals() method. If inheritance is developed, it should be replaced by isOfType() method to allow a super class Type reference to its sub-class. 
+
+	2.3 Code Generation
+	For reference and its value, i used to visit with an argument of 0 and 1 to distinguish them. a reference can be assigned and further referenced to its sub members, and the value is just to put a value on stack. 
+
+3. Extra-Credit Part Specification 
+	3.1 Function overloading
+    I've done this by mapping the function signature to a special string and use this special string as the identification. For instance, 
+		int foo(int x, boolean y, A a){}
+	will be mapped to look-up string "$foo<int><boolean><A>" and entered into identification table. when and CallExpr calls the methods, it first generate the corresponding look-up id string by peek the types of its arguments. Note in this sense, a field and a method can viewed as overloading. 'int foo(){}' and 'int foo;' are different in identification table, the former is "$foo" and the later is "foo". 
+
+	3.2 For Statement
+    The AST of forStmt has been elaborated in the AST part. Its implementation is like the while statement except that there is a initial declaration as initial statement, which are supposed to be popped of the local declarations. 
+
+	3.3 Short-circuit evaluation
+	//A last minute bug is discovered. when the sub-node is also a binary express and with loop-stattement, error may occur
+	//short-circuit can be disabled by set the the short-circuit enable value in Encoder.
+	A ShortCircuitEvaluator is created under the same directory of CodeGenerator class. It has three major methods. 
+FindJumpNode() is used for finding the furthest node to jump if the jump condition is matched. emitShortCircuitCode() is for emit the code stencil of the jump code. The patchCutJump is to traverse the Binary AST to patch the jump line with the correct jump-to line. For now, it supports the value evaluation. However, when used to Branch-Statment or AssignExpr, the connection-code may be further reduced by avoidance of reserving truth value on stack.  
+
+//Below are partial implementation 
+	3.4 Static-method and static field.
+	This has been done with the identification and type checking stage. A method StaticCheckWithDecl() is define to check the correct static usage, including checking "a non-static member cannot be reference in a static method" and "In a ClassRef, only the static member can be referenced. " For this reason, a user can define a static method and field, but the code generation stage hasn't been developed. 
+
+	3.5 Inheritance
+	the key word "extends" and "instanceof" has been added to the SyntaticAnalyer and can be parsed into corresponding AST. 

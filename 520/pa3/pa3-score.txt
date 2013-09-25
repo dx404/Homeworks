@@ -1,0 +1,93 @@
+pa3 results for duozhao
+up to 2 points per test for correct determination of pass/fail in contextual analysis
+including reasonable diagnostic message for programs that do not pass.
+
+miniJava compiler build succeeded. 
+
+Test fail301: was correctly rejected with valid diagnostic.    Points = 2
+Test fail302: was correctly rejected with valid diagnostic.    Points = 2
+Test fail303: was correctly rejected with valid diagnostic.    Points = 2
+Test fail304: was correctly rejected with valid diagnostic.    Points = 2
+Test fail306: FAILED to be rejected.                           Points = 0
+Test fail307: FAILED to be rejected.                           Points = 0
+Test fail308: FAILED to be rejected.                           Points = 0
+Test fail309: was correctly rejected with valid diagnostic.    Points = 2
+Test fail310: FAILED to be rejected.                           Points = 0
+Test fail311: FAILED to be rejected.                           Points = 0
+Test fail312: was correctly rejected with valid diagnostic.    Points = 2
+Test fail313: was correctly rejected with valid diagnostic.    Points = 2
+Test fail314: FAILED to be rejected.                           Points = 0
+Test fail315: was correctly rejected with valid diagnostic.    Points = 2
+Test fail316: was correctly rejected with valid diagnostic.    Points = 2
+Test fail317: was correctly rejected with valid diagnostic.    Points = 2
+Test fail318: was correctly rejected with valid diagnostic.    Points = 2
+Test fail320: FAILED to be rejected.                           Points = 0
+Test fail321: FAILED to be rejected.                           Points = 0
+Test fail322: was correctly rejected with valid diagnostic.    Points = 2
+Test fail323: was correctly rejected with valid diagnostic.    Points = 2
+Test fail324: was correctly rejected with valid diagnostic.    Points = 2
+Test fail326: FAILED to be rejected.                           Points = 0
+Test fail327: was correctly rejected with valid diagnostic.    Points = 2
+Test fail328: was correctly rejected with valid diagnostic.    Points = 2
+Test fail330: was correctly rejected with valid diagnostic.    Points = 2
+Test fail331: your compiler failed while processing the test input!
+Test fail332: was correctly rejected with valid diagnostic.    Points = 2
+Test fail333: was correctly rejected with wrong diagnostic.    Points = 1
+Test fail335: was correctly rejected with valid diagnostic.    Points = 2
+Test fail336: was correctly rejected with valid diagnostic.    Points = 2
+Test fail337: was correctly rejected with valid diagnostic.    Points = 2
+Test fail338: was correctly rejected with valid diagnostic.    Points = 2
+Test fail339: was correctly rejected with valid diagnostic.    Points = 2
+Test fail340: was correctly rejected with valid diagnostic.    Points = 2
+Test fail341: was correctly rejected with valid diagnostic.    Points = 2
+Test fail342: was correctly rejected with wrong diagnostic.    Points = 1
+Test fail343: your compiler failed while processing the test input!
+Test fail350: was correctly rejected with valid diagnostic.    Points = 2
+Test fail351: was correctly rejected with valid diagnostic.    Points = 2
+Test fail352: was correctly rejected with valid diagnostic.    Points = 2
+Test fail353: was correctly rejected with valid diagnostic.    Points = 2
+Test fail354: was correctly rejected with valid diagnostic.    Points = 2
+Test fail355: was correctly rejected with valid diagnostic.    Points = 2
+Test fail361: was correctly rejected with wrong diagnostic.    Points = 1
+Test fail362: was correctly rejected with valid diagnostic.    Points = 2
+Test fail363: FAILED to be rejected.                           Points = 0
+Test fail364: was correctly rejected with valid diagnostic.    Points = 2
+Test fail365: FAILED to be rejected.                           Points = 0
+Test fail366: your compiler failed while processing the test input!
+Test fail367: was correctly rejected with valid diagnostic.    Points = 2
+Test fail368: was correctly rejected with valid diagnostic.    Points = 2
+Test pass301: was correctly accepted.                          Points = 2
+Test pass302: was correctly accepted.                          Points = 2
+Test pass303: was correctly accepted.                          Points = 2
+Test pass304: was correctly accepted.                          Points = 2
+Test pass306: was correctly accepted.                          Points = 2
+Test pass307: was correctly accepted.                          Points = 2
+Test pass308: was correctly accepted.                          Points = 2
+Test pass309: FAILED to be accepted.                           Points = 0
+Test pass315: was correctly accepted.                          Points = 2
+Test pass316: your compiler failed while processing the test input!
+Test pass321: was correctly accepted.                          Points = 2
+Test pass323: your compiler failed while processing the test input!
+Test pass341: was correctly accepted.                          Points = 2
+Test pass342: was correctly accepted.                          Points = 2
+Test pass343: was correctly accepted.                          Points = 2
+Test pass344: was correctly accepted.                          Points = 2
+Test pass345: was correctly accepted.                          Points = 2
+Test pass346: was correctly accepted.                          Points = 2
+Test pass347: was correctly accepted.                          Points = 2
+Test pass348: was correctly accepted.                          Points = 2
+Test pass349: was correctly accepted.                          Points = 2
+Test pass350: was correctly accepted.                          Points = 2
+Test pass351: was correctly accepted.                          Points = 2
+Test pass352: your compiler failed while processing the test input!
+Test pass353: was correctly accepted.                          Points = 2
+Test pass354: your compiler failed while processing the test input!
+Test pass355: your compiler failed while processing the test input!
+Test pass356: your compiler failed while processing the test input!
+Test pass357: FAILED to be accepted.                           Points = 0
+
+
+Fail testcases:   Correct: 38   Incorrect: 11
+Pass testcases:   Correct: 21   Incorrect: 2
+
+Total Points Earned: 115

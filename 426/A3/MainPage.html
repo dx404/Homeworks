@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Find My Roommate</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/findmyroommate.css">
+  </head>
+
+  <body>
+    <div id="page-head-div">
+		<div id = "page-head-title">Find My Roommate</div>
+		<div id ="page-head-greetings">Hello Isabella! <button>Update My Profile</button><button>Log Out</button></div>	
+    </div>
+    <div id="search-option-div">
+    <div>Select your search options here:</div>
+    <form>
+    	<table>
+		   <tbody>
+	    		<tr><td><div>Gender: <label>Male<input type="radio" name="select-gender"></label><label>Female<input type="radio" name="select-gender"></label></div></td>
+	    			<td><div>Age: from
+					    <select name="age-no-younger-than">
+				          <option selected="selected">17</option>
+				          <option>18</option>
+				          <option>19</option>
+				          <option>20</option>
+				          <option>21</option>
+				          <option>22</option>
+				          <option>23</option>
+				          <option>24</option>
+				          <option>25</option>
+				          <option>26</option>
+				          <option>27</option>
+				          <option>28</option>
+				        </select>
+				        to
+				        <select name="age-no-older-than">
+				          <option>17</option>
+				          <option>18</option>
+				          <option>19</option>
+				          <option>20</option>
+				          <option>21</option>
+				          <option>22</option>
+				          <option>23</option>
+				          <option>24</option>
+				          <option>25</option>
+				          <option>26</option>
+				          <option>27</option>
+				          <option selected="selected">28</option>
+				        </select>
+		    		</div></td>
+	    			<td><div>Dorm: <select name="dormoptions">
+				          <option selected="selected">Ram Village</option>
+				          <option>Odum Village</option>
+				          <option>1101 Mason Farm Road</option>
+				          <option>Morrison</option>
+				          <option>Hinton James</option>
+				          <option>Parker</option>
+				          <option>Teague</option>
+				          <option>Old East</option>
+				          <option>Old West</option>
+				          <option>Ruffin</option>
+				          <option>Graham</option>
+				          <option>Aycock</option>
+				        </select></div></td>
+	    <tr><td colspan="2">
+		    <div>Year: 
+		    	<label>Freshman<input type="radio" name="select-year"></label>
+		    	<label>Sophomore<input type="radio" name="select-year"></label>
+		    	<label>Junior<input type="radio" name="select-year"></label>
+		    	<label>Senior<input type="radio" name="select-year"></label>
+		    	<label>Graduate Students<input type="radio" name="select-year"></label>
+		    </div>
+		   </td></tr>
+	    <tr><td colspan="2">
+		    <div>Major: 
+			   <select name="major-option-1">
+				    <option>Computer Science</option>
+				    <option>Electronic Engineering </option>
+				    <option>Mathematics</option>
+				    <option>Statistics </option>
+				    <option>Physics</option>
+				    <option>Chemistry</option>
+				    <option>Biology</option>
+				    <option>Business</option>
+				    <option>Others</option>
+			   	</select>
+			   	<select name="major-option-2">
+				    <option>Computer Science</option>
+				    <option>Electronic Engineering </option>
+				    <option>Mathematics</option>
+				    <option>Statistics </option>
+				    <option>Physics</option>
+				    <option>Chemistry</option>
+				    <option>Biology</option>
+				    <option>Business</option>
+				    <option>Others</option>
+			   	</select>
+			   	<select name="major-option-3">
+				    <option>Computer Science</option>
+				    <option>Electronic Engineering </option>
+				    <option>Mathematics</option>
+				    <option>Statistics </option>
+				    <option>Physics</option>
+				    <option>Chemistry</option>
+				    <option>Biology</option>
+				    <option>Business</option>
+				    <option>Others</option>
+			   	</select>
+			    (Up to 3 choices)
+		    </div>
+		 </td></tr>
+		   	<tr>
+		   		<td>Music Listening <select name="music-listening"><option>With headsets on</option> <option>Speaker</option> </select></td> 
+		   		<td>Visitor <select name="visitor-preference"><option>Frequent Visitor</option> <option>No Visitor</option> </select></td> 
+		   	</tr>
+		   	<tr>
+		   		<td>Sleeping Preference <select name="sleeping-preference"><option>Before 12AM</option><option>12AM-2AM</option><option>After 2AM</option></select></td> 
+		        <td>Wake Preference <select name="sleeping-preference"><option>Before 7AM</option><option>7AM-9AM</option><option>After 9AM</option></select></td> 
+		   	</tr>
+		   	<tr>
+		   		<td>Cleanness <select name="cleanness"><option>Clean everyday</option><option>Clean every week</option><option>No often</option></select></td> 
+		        <td>Study Habits <select name="study-preference"><option>Study in my room</option><option>Study in library</option></select></td> 
+		   	</tr>
+		   </tbody>
+	   </table>
+	   <div id="search-buttons">
+	   		<button type="submit">Start</button><button type="reset">Clear</button>
+	   </div>
+   </form>
+    </div>
+    <div id="search-result-div">
+     <div class="search-result-item">
+      <div>
+		  <div class="ranking">1</div>
+		  <figure>
+		    	<img src="./photos/icon.jpg" alt="Tommy Smith's profile picture" height="150" width="150">
+		  </figure>
+	  </div>
+	  <div>  
+		  <div class="Name">Tommy Smith</div>
+	      <div class="stats">
+	   		<span class="biostat">Gender:</span> Male 
+	   		<span class="biostat">Age:</span> 19
+	   		<span class="biostat">Year:</span> Freshman
+	   		<span class="biostat">Major:</span> Computer Science
+	 	  </div>
+		  <div>
+		    <table class="preference-table">
+				<tbody>
+					<tr><td><span>Music Listening: </span>Speaker</td><td><span>Visitor:</span>No Visitor</td></tr>
+					<tr><td><span>Sleep Preference:</span>Before 12AM</td><td><span>Wake Preference:</span>7AM-9AM</td></tr>
+					<tr><td><span>Cleanness: </span>Clean Everyday</td><td><span>Study Preference:</span>Study in library</td></tr>	
+			      </tbody>
+		    </table>
+		  </div>
+	  </div>
+     </div>
+     <div class="search-result-item">
+      <div>
+		  <div class="ranking">2</div>
+		  <figure>
+		    	<img src="./photos/icon.jpg" alt="Tommy Smith's profile picture" height="150" width="150">
+		  </figure>
+	  </div>
+	  <div>
+		  <div class="Name">Tommy Smith</div>
+	      <div class="stats">
+	   		<span class="biostat">Gender:</span> Male 
+	   		<span class="biostat">Age:</span> 19
+	   		<span class="biostat">Year:</span> Freshman
+	   		<span class="biostat">Major:</span> Computer Science
+	 	  </div>
+		  <div>
+		    <table class="preference-table">
+		      <tbody>
+					<tr><td><span>Music Listening: </span>Speaker</td><td><span>Visitor:</span>No Visitor</td></tr>
+					<tr><td><span>Sleep Preference:</span>Before 12AM</td><td><span>Wake Preference:</span>7AM-9AM</td></tr>
+					<tr><td><span>Cleanness: </span>Clean Everyday</td><td><span>Study Preference:</span>Study in library</td></tr>	
+			  </tbody>
+		    </table>
+		  </div>
+	  </div>
+     </div>
+	 <div class="search-result-item">   
+		 <div>
+			  <div class="ranking">3</div>
+			  <figure>
+			    	<img src="./photos/icon.jpg" alt="Tommy Smith's profile picture" height="150" width="150">
+			  </figure>
+		  </div>
+	  	 <div>
+			  <div class="Name">Tommy Smith</div>
+		      <div class="stats">
+		   		<span class="biostat">Gender:</span> Male 
+		   		<span class="biostat">Age:</span> 19
+		   		<span class="biostat">Year:</span> Freshman
+		   		<span class="biostat">Major:</span> Computer Science
+		 	  </div>
+			  <div>
+			    <table class="preference-table">
+			      <tbody>
+					<tr><td><span>Music Listening: </span>Speaker</td><td><span>Visitor:</span>No Visitor</td></tr>
+					<tr><td><span>Sleep Preference:</span>Before 12AM</td><td><span>Wake Preference:</span>7AM-9AM</td></tr>
+					<tr><td><span>Cleanness: </span>Clean Everyday</td><td><span>Study Preference:</span>Study in library</td></tr>	
+			      </tbody>
+			    </table>
+			  </div>
+		  </div>
+		  </div>
+	</div>
+  </body>
+</html>   

@@ -1,0 +1,352 @@
+
+/******************************************************************************
+ * 1- This variable is outside of the function
+ */
+var a = "global value";
+
+var f = function () {
+	// Variable names declared inside 
+	// a function are "local"
+
+	var a = "local value";
+
+	out("Inside f()", a);
+};
+
+f();
+
+out("Outside f()", a);
+
+/******************************************************************************
+ * 2 - This variable is outside of the function
+ */
+var a = "global value";
+
+var f = function () {
+	out("Inside f", a); 
+//when f() is called, the global variable is visible, like the field within a java class.  
+	a = "a new value";
+
+	out("After reassignment", a);
+};
+
+f();
+
+out("Outside f", a);
+
+/* Comments:
+ * Does the order of variable declaration in JavaScript matter?
+ * 
+ */
+
+/******************************************************************************
+ * 3 - Hoisting
+ */
+
+var a = "Global value";
+
+var f = function () {
+	out("Before declaration or assignment", a);
+
+	a = "Local value";
+
+	out("After assignment, before declaration", a);
+
+	var a; //hoist to the top of the function
+
+	out("After assignment and declaration", a);
+};
+
+f();
+
+out("Outside f()", a);
+
+/******************************************************************************
+ * 4- Function passed to a function
+ */
+var processArray = function (a, f) {
+	var result = []; 
+	for (var i=0; i<a.length; i++) {
+		result.push(f(a[i])); 
+	}
+	return result;
+}
+
+var in1 = [1, 2, 3, 4];
+var in2 = ['hello', 'bye', 'foo', 'bar'];
+
+var addTwo = function (x) {return x+2;};
+
+out("in1", in1);
+out("in2", in2);
+
+out("processArray(in1, addTwo)", 
+		processArray(in1, addTwo));
+
+out("processArray(in2, anonymous function object)", 
+		processArray(in2, function (x) {return x.length;}));
+
+/******************************************************************************
+ * 5 - Function returning to a function
+ */
+var addFactory = function (x) {
+	var adder = function (y) {return x+y;};
+	return adder;
+}
+
+var addTwo = addFactory(2);
+var addThree = addFactory(3);
+
+out("addTwo(7)", addTwo(7));
+out("addThree(7)", addThree(7));
+
+
+/******************************************************************************
+ * 6 - Literal Objects and properties
+ */
+//This creates a new empty object
+var a = {}; //Empty objects with brackets declaration
+out("Empty object", a);
+
+//Add properties any time you want.
+a.p1 = "v1";
+a.p2 = 100;
+
+out("With some properties", a);
+
+//Literal syntax with properites
+var b = {x: 100, y: 50};
+
+out("b made with properties", b);
+
+//Properties can be anything, even arrays or other objects
+
+var c = {array_prop: [1,2,3],
+		obj_prop: b};
+
+out("c", c);
+
+/******************************************************************************
+ * 7 - Object as associate array
+ */
+var a = {p1: "v1", p2: 100};
+
+out("a", a);
+out("a['p1']", a["p1"]);
+out("a['p2']", a["p2"]);
+
+//Setting a property
+
+a['p3'] = "v3";
+out("a after setting a['p3']", a);
+
+//Using a non-string key
+a[5] = "v5";
+out("a after setting a[5]", a);
+
+//Using an object as a key
+b = {p1: "v1"};
+
+a[b] = "value for obj b as key";
+out("a with b as key", a);
+out("a[b]", a[b]);
+
+
+/******************************************************************************
+ * 8 - Function as Method
+ */
+var a = {data: [1,2,3],
+		sum: function() { 
+			var sum = 0;
+			for (var i =0; i < this.data.length; i++) {
+				sum += this.data[i];
+			}
+			return sum;
+		}
+};
+
+out("a.sum()", a.sum());
+
+a.data.push(4);
+a.data.push(5);
+
+out("a.data", a.data);
+out("a.sum()", a.sum());
+/******************************************************************************
+ * 9 - Same function as method for two different objects
+ */
+var dist = function(pnt) {
+	return Math.sqrt(Math.pow(this.x - pnt.x, 2)+
+			Math.pow(this.y - pnt.y, 2));
+}
+
+var a = {x: 1, y: 5, distanceTo: dist};
+var b = {x: 8, y: 10, distanceTo: dist};
+
+out("a.distanceTo(b)", a.distanceTo(b));
+out("b.distanceTo(a)", b.distanceTo(a));
+
+/******************************************************************************
+ * 10 - foo/bar closure example
+ */
+var bar = function (a, b) {
+	var product = a*b;
+	var sum = a+b;
+
+	return function() {return product / sum};
+};
+
+foo1 = bar(1,2);
+foo2 = bar(3,4);
+
+out("foo1()", foo1());
+out("foo2()", foo2());
+
+/*
+ * Q: What is closure here?
+ */
+/******************************************************************************
+ * 11 - Use of new operator //use modifer to create ??
+ */
+
+var Car = function (model, make, year) {
+	this.model = model;
+	this.make = make;
+	this.year = year;
+
+	this.name = function () {
+		return "" + this.year + " " + this.make + " " + this.model;
+	}
+};
+
+var my_car = new Car("Mustang", "Ford", 1965);
+
+out("my_car", my_car);
+out("my_car instanceof Car", my_car instanceof Car);
+out("my_car.name()", my_car.name());
+
+/******************************************************************************
+ * 12 - prototype methods
+ */
+
+var Car = function (model, make, year) {
+	this.model = model;
+	this.make = make;
+	this.year = year;
+};
+
+Car.prototype.name = function () {
+	return "" + this.year + " " + this.make + " " + this.model;
+}
+
+var my_car = new Car("Mustang", "Ford", 1965);
+var your_car = new Car("Escort", "Ford", 1987);
+
+out("my_car.name()", my_car.name());
+out("your_car.name()", your_car.name());
+
+
+/******************************************************************************
+ * 13 - Instance specific properties/methods
+ */
+
+var Car = function (model, make, year) {
+	this.model = model;
+	this.make = make;
+	this.year = year;
+};
+
+Car.prototype.name = function () {
+	return "" + this.year + " " + this.make + " " + this.model;
+}
+
+var my_car = new Car("Mustang", "Ford", 1965);
+var your_car = new Car("Escort", "Ford", 1987);
+
+my_car.nickname = "Fred";
+my_car.name = function () {
+	return this.nickname;
+}
+
+out("my_car.name()", my_car.name());
+
+delete my_car.name;
+
+out("my_car.name()", my_car.name());
+out("my_car.nickname", my_car.nickname);
+
+delete my_car.nickname;
+
+out("my_car.nickname", my_car.nickname);
+
+
+
+
+/******************************************************************************
+ * 14 - past facto properties/methods
+ */
+
+var Car = function (model, make, year) {
+	this.model = model;
+	this.make = make;
+	this.year = year;
+};
+
+Car.prototype.name = function () {
+	return "" + this.year + " " + this.make + " " + this.model;
+}
+
+var my_car = new Car("Mustang", "Ford", 1965);
+var your_car = new Car("Escort", "Ford", 1987);
+
+Car.prototype.is_old = function () {
+	if (this.year < 1980) {
+		return true;
+	}
+	return false;
+}
+
+out("Is my car old?", my_car.is_old());
+out("Is your car old?", your_car.is_old());
+
+
+/******************************************************************************
+ * 15 - Static Properties/Methods
+ */
+
+var Car = function (model, make, year) {
+	this.model = model;
+	this.make = make;
+	this.year = year;
+};
+
+Car.prototype.name = function () {
+	return "" + this.year + " " + this.make + " " + this.model;
+}
+
+Car.makes = ['Ford', 'Chevy', 'Honda'];
+Car.models = {};
+Car.models['Ford'] = ['Mustang', 'Focus', 'Fusion'];
+Car.models['Chevy'] = ['Cavalier', 'Camaro', 'Corvette', 'Cobalt'];
+Car.models['Honda'] = ['Civic', 'Accord'];
+
+Car.makeRandom = function () {
+	var year = 1960 + Math.floor(Math.random() * 50);
+	var make = Car.makes[Math.floor(Math.random() * Car.makes.length)];
+	var model = Car.models[make][Math.floor(Math.random() * Car.models[make].length)];
+	return new Car(model, make, year);
+};
+
+var my_car = Car.makeRandom();
+var your_car = Car.makeRandom();
+
+out("My car:", my_car.name());
+out("Your car:", your_car.name());
+
+/******************************************************************************
+ * 
+ */
+
+/******************************************************************************
+ * 
+ */

@@ -1,0 +1,37 @@
+pa4 results for duozhao
+3 points for correct output in pass4xx test (1 point for accept but wrong result)
+1 point for correct detection of error in fail4xx test (plus up to 1 point for diagnostic message)
+
+miniJava compiler build succeeded.
+mJAM interpreter build succeeded.
+
+Starting Tests ... 
+Test fail401: was correctly rejected with valid diagnostic.    Points = 2
+Test fail402: FAILED to be rejected.                           Points = 0
+Test pass401: mJAM program yields correct result!              Points = 3
+Test pass402: mJAM program yields correct result!              Points = 3
+Test pass403: mJAM program yields correct result!              Points = 3
+Test pass404: mJAM program yields correct result!              Points = 3
+Test pass405: mJAM program yields correct result!              Points = 3
+Test pass406: mJAM program yields correct result!              Points = 3
+Test pass407: mJAM program yields correct result!              Points = 3
+Test pass408: mJAM program yields correct result!              Points = 3
+Test pass409: mJAM program yields correct result!              Points = 3
+Test pass410: mJAM program yields correct result!              Points = 3
+Test pass411: mJAM program yields correct result!              Points = 3
+Test pass412: mJAM program yields correct result!              Points = 3
+Test pass413: mJAM program yields correct result!              Points = 3
+Test pass414: mJAM program yields correct result!              Points = 3
+Test pass415: mJAM program yields correct result!              Points = 3
+Test pass416: mJAM program FAILS to yield correct result.      Points = 1
+Test pass417: your compiler failed while processing the test input!
+Test pass418: mJAM program FAILS to yield correct result.      Points = 1
+Test pass419: mJAM program FAILS to yield correct result.      Points = 1
+Test pass420: mJAM program FAILS to yield correct result.      Points = 1
+Test pass421: mJAM program yields correct result!              Points = 3
+
+
+Fail testcases:   Correct: 1   Incorrect: 1
+Pass testcases:   Correct: 16   Incorrect: 4
+
+Total Points Earned: 54

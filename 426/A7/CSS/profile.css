@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+p.section-help {
+	font-size:18px;
+	margin-left:0.5cm;
+}
+
+/* Below is the layout of div blocks*/
+div.simple-input-block:hover,button:hover {
+	background-color: yellow;
+}
+
+ul.option {
+	counter-reset:optionCounter; 
+}
+
+ul.option > li:before{
+	content: "Option " counter(optionCounter) ": "; 
+	counter-increment:optionCounter;
+	font-style:italic;
+}
+
+form.main>div{
+	margin: 0.2cm;
+	padding: 0.2cm;
+}
+
+form.main>div:first-child { /*3 sub-blocks in the 1st block*/
+	position: relative;
+	height: 430px;
+}
+
+#info>div {
+	position: absolute;
+}
+
+div.control-button { /* the block of buttons at the bottom */
+	float: right;
+}
+
+#info>div:nth-child(1) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 50%;
+	min-width: 350px;
+}
+
+#info>div:nth-child(2) {
+	top: 0;
+	left: 50%;
+	right: 0;
+}
+
+#info>div:nth-child(3) {
+	bottom: 0;
+	left: 50%;
+	right: 0;
+}
+
+/* Below are the layout of the components inside div */
+
+#basic-info>fieldset {
+	height: 400px;
+}
+
+td {
+	height: 30px;
+}
+
+#basic-info td {
+	height: 32px;
+}
+
+.required{
+	color:red;
+}
+
+button.bottom {
+	width: 200px;
+	height: 40px;
+	font-size: 16px;
+}

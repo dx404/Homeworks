@@ -1,0 +1,10 @@
+/** pre-defined classes in miniJava
+ *  Standard Environment, Level 0
+ */
+class _PrintStream{
+	public void print(int n){ }
+	public void println(int n){ }
+}
+class System{
+	public static _PrintStream out;
+} 

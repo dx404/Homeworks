@@ -1,0 +1,26 @@
+div.menu {
+	width:160px;
+	background-color: gray;
+	height: 500px;
+	margin-left: 0.3cm;
+	border: 2px solid blue;
+	float:left;
+}
+
+fieldset.menu {
+	margin: 0.3cm;
+	opacity: 0.85;
+	background-color: lightblue;
+	border: 5px outset #B8860B;
+}
+
+legend.menu {
+	font: italic bold 22px arial, sans-serif;
+	color: Indigo;
+	margin-top: 0;
+}
+
+div.menu tr:hover {
+	background-color:yellow;
+	font-style:italic;
+}

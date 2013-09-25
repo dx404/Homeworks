@@ -1,0 +1,4 @@
+snapper.cs.unc.edu:8360/hello.txt
+snapper.cs.unc.edu:8360/hello.html
+snapper.cs.unc.edu:8360/hello.TXT
+snapper.cs.unc.edu:8360/hello.exe

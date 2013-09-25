@@ -1,0 +1,4 @@
+<IFDefine !WWWPS>
+RedirectMatch (.*)$ https://wwwp.cs.unc.edu$1
+</IFDefine>
+

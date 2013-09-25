@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+	background-image: url('../background/skyblue.jpg');
+	background-repeat: repeat-x;
+	min-width: 1300px;
+}
+
+#search-result-div {
+	height: 400px;
+	overflow: auto;
+	min-width: 200px;
+	border: thin solid black;
+	background-color: #F0F8FF;
+	padding: 5px;
+	margin: 5px;
+	margin-top: 20px;
+}
+
+#search-option-div {
+	height: 250px;
+	min-width: 200px;
+	border: thin solid black;
+	overflow: auto;
+	background-color: #FFE4C4;
+	padding: 5px;
+	margin: 5px;
+	margin-top: 20px;
+}
+
+#search-option-div>div {
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#search-option-div>form {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#page-head-title {
+	font-family: "Times New Roman", Georgia, Serif;
+	font-weight: bold;
+	font-size: 20pt;
+	float: left;
+	color: white;
+	margin-top: 3px;
+	margin-left: 3px;
+}
+
+#page-head-greetings {
+	font-family: "Times New Roman", Georgia, Serif;
+	font-weight: bold;
+	font-size: 20pt;
+	float: right;
+	color: white;
+}
+
+div.ranking {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.Name {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.search-result-item>div:nth-child(1) {
+	position: absolute;
+	left: 1%;
+}
+
+.search-result-item>div:nth-child(2) {
+	position: absolute;
+	right: 40%;
+	top: 30px;
+}
+
+.search-result-item>div:nth-child(2) span {
+	font-weight: bold;
+	font-family: "Arial", Georgia, Serif;
+}
+
+.search-result-item {
+	border: thin dashed blue;
+	position: relative;
+	height: 240px;
+}
+
+#search-result-div>div:nth-child(n) {
+	background-color: #F5F5F5;
+}
+
+#search-result-div>div:nth-child(2n) {
+	background-color: #B0E0E6;
+}

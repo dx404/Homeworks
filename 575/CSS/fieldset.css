@@ -1,0 +1,12 @@
+fieldset {
+	margin: 0.3cm;
+	opacity: 0.85;
+	background-color: lightblue;
+	border: 5px outset #B8860B;
+}
+
+legend {
+	font: italic bold 22px arial, sans-serif;
+	color: Indigo;
+	margin-top: 0;
+}

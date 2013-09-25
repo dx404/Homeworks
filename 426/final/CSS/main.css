@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+#search-option-div {
+	height: 250px;
+	min-width: 200px;
+	border: thin solid black;
+	overflow: auto;
+	background-color: #FFE4C4;
+	/* padding: 5px;
+	margin: 5px;
+	margin-top: 20px; */
+}
+
+.search-result-div {
+	height: 500px;
+	overflow: auto;
+	min-width: 200px;
+	border: thin solid black;
+	background-color: #F0F8FF;
+	padding: 5px;
+	margin: 5px;
+	margin-top: 20px;
+}
+
+#search-option-div>div {
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 16pt;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#search-option-div>form {
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+div.ranking {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.user-name {
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+
+div.user-snippet {
+	position: absolute;
+	left: 25%;
+	width: 65%;
+	top: 18%;
+}
+
+.search-result-item>div:nth-child(2) span[class$='label'] {
+	font-weight: bold;
+	font-family: "Arial", Georgia, Serif;
+}
+
+.search-result-item {
+	border: thin dashed blue;
+	position: relative;
+	height: 240px;
+}
+
+.search-result-item:nth-child(odd) {
+	background-color: #F5F5F5;
+}
+
+.search-result-item>:nth-child(even) {
+	background-color: #B0E0E6;
+}
+
+#bottom-button {
+	height:20px;
+}
+
+#bottom-button button{
+	float:right;
+}
